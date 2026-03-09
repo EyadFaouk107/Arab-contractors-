@@ -1,4 +1,8 @@
 /* Utility Classes */
+html {
+  scroll-behavior: smooth;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
