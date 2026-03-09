@@ -44,3 +44,13 @@
   --container-max: 1280px;
   --nav-height: 110px;
 }
+
+/* Mobile Overrides */
+@media (max-width: 767px) {
+  :root {
+    --space-4xl: 64px;
+    --space-3xl: 48px;
+    --space-2xl: 32px;
+    --nav-height: 80px;
+  }
+}
