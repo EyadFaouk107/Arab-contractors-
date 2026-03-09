@@ -1,0 +1,54 @@
+/* Responsive Queries */
+
+/* Tablet (>= 640px) */
+@media (min-width: 640px) {
+  .grid-2-sm { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Tablet LG (>= 768px) */
+@media (min-width: 768px) {
+  .grid-2-md { grid-template-columns: repeat(2, 1fr); }
+  .grid-3-md { grid-template-columns: repeat(3, 1fr); }
+  
+  .mobile-only { display: none; }
+}
+
+/* Desktop (>= 1024px) */
+@media (min-width: 1024px) {
+  .grid-3-lg { grid-template-columns: repeat(3, 1fr); }
+  .grid-4-lg { grid-template-columns: repeat(4, 1fr); }
+  
+  .nav-mobile-toggle { display: none; }
+  
+  .video-featured {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  
+  .video-featured .card-content {
+    justify-content: center;
+  }
+}
+
+/* Mobile Specifics (< 768px) */
+@media (max-width: 767px) {
+  .grid-2, .grid-3, .grid-4 {
+    grid-template-columns: 1fr;
+  }
+  
+  .flex-between {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+  
+  .section {
+    padding: var(--space-2xl) 0;
+  }
+}
+
+/* Tablet Specifics (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .grid-3, .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

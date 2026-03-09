@@ -1,0 +1,41 @@
+/**
+ * Main Entry Point
+ */
+
+import { initNavigation } from './navigation.js';
+import { initAnimations } from './animations.js';
+import { initCounters } from './counters.js';
+import { initSlider } from './slider.js';
+import { initProjects } from './projects.js';
+import { initForms } from './forms.js';
+import { initYouTube } from './youtube.js';
+import { initTranslation } from './translation.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('Arab Contractors Website Initialized');
+  
+  initTranslation();
+  initNavigation();
+  initAnimations();
+  initCounters();
+  initSlider();
+  initProjects();
+  initForms();
+  initYouTube();
+
+  // Back to Top Button
+  const backToTop = document.querySelector('.back-to-top');
+  if (backToTop) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTop.classList.add('active');
+      } else {
+        backToTop.classList.remove('active');
+      }
+    });
+
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+});
