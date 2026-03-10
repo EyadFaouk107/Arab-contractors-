@@ -55,6 +55,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: var(--space-md);
 }
 
 .items-start { align-items: flex-start; }
@@ -90,6 +91,10 @@
     height: var(--nav-height);
     padding: 0;
   }
+}
+
+.logo {
+  flex-shrink: 0;
 }
 
 .nav-desktop {
@@ -129,6 +134,10 @@
 
 .nav-link:hover::after, .nav-link.active::after {
   width: 100%;
+}
+
+.nav-actions {
+  flex-shrink: 0;
 }
 
 .nav-actions button {

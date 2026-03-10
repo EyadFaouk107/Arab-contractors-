@@ -4,8 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projects | Arab Contractors - المقاولون العرب</title>
-    <meta name="description" content="Explore the landmark projects delivered by Arab Contractors across the globe.">
-    <link rel="icon" type="image/png" href="https://www.arabcont.com/favicon.ico">
+    <meta name="description" content="Explore the extensive portfolio of landmark projects delivered by Arab Contractors globally, spanning infrastructure, housing, and industrial sectors.">
+    <meta name="keywords" content="Arab Contractors projects, construction portfolio, engineering projects, infrastructure development, global construction">
+    <meta name="author" content="Arab Contractors">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ais-dev-a7v5tkqjchqiehcescqkvf-174852774225.europe-west1.run.app/projects.html">
+    <meta property="og:title" content="Projects | Arab Contractors - المقاولون العرب">
+    <meta property="og:description" content="Explore the extensive portfolio of landmark projects delivered by Arab Contractors globally, spanning infrastructure, housing, and industrial sectors.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&h=630&fit=crop">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ais-dev-a7v5tkqjchqiehcescqkvf-174852774225.europe-west1.run.app/projects.html">
+    <meta property="twitter:title" content="Projects | Arab Contractors - المقاولون العرب">
+    <meta property="twitter:description" content="Explore the extensive portfolio of landmark projects delivered by Arab Contractors globally, spanning infrastructure, housing, and industrial sectors.">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&h=630&fit=crop">
+
+    <!-- Favicon -->
   </head>
   <body>
     <!-- Header -->
@@ -25,8 +43,8 @@
             <li><a href="about.html" class="nav-link">About</a></li>
             <li><a href="projects.html" class="nav-link active">Projects</a></li>
             <li><a href="sectors.html" class="nav-link">Sectors</a></li>
+            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
             <li><a href="news.html" class="nav-link">News</a></li>
-            <li><a href="careers.html" class="nav-link">Careers</a></li>
             <li><a href="contact.html" class="nav-link">Contact</a></li>
           </ul>
         </nav>
@@ -50,8 +68,8 @@
         <li><a href="about.html">About</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="sectors.html">Sectors</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
         <li><a href="news.html">News</a></li>
-        <li><a href="careers.html">Careers</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
@@ -60,8 +78,8 @@
       <section class="section-dark py-4xl relative" style="background-image: url('https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=1920'); background-size: cover; background-position: center;">
         <div class="overlay"></div>
         <div class="container relative z-10 text-center">
-          <h1 class="text-white">Our Projects</h1>
-          <p class="text-white opacity-100">Landmarks that define the engineering of today</p>
+          <h1 class="text-white" data-i18n="projects_page_title">Our Projects</h1>
+          <p class="text-white opacity-100" data-i18n="projects_page_subtitle">Landmarks that define the engineering of today</p>
         </div>
       </section>
 
@@ -70,81 +88,160 @@
           <!-- Filter Bar -->
           <div class="flex-between mb-3xl p-md bg-neutral-light radius-card">
             <div class="flex gap-md">
-              <button class="filter-btn active btn-outline" data-filter="all" style="color: var(--color-primary); border-color: var(--color-primary);">All</button>
-              <button class="filter-btn btn-outline" data-filter="infrastructure" style="color: var(--color-primary); border-color: var(--color-primary);">Infrastructure</button>
-              <button class="filter-btn btn-outline" data-filter="buildings" style="color: var(--color-primary); border-color: var(--color-primary);">Buildings</button>
-              <button class="filter-btn btn-outline" data-filter="energy" style="color: var(--color-primary); border-color: var(--color-primary);">Energy</button>
+              <button class="filter-btn active btn-outline" data-filter="all" style="color: var(--color-primary); border-color: var(--color-primary);" data-i18n="projects_filter_all">All</button>
+              <button class="filter-btn btn-outline" data-filter="infrastructure" style="color: var(--color-primary); border-color: var(--color-primary);" data-i18n="projects_filter_infrastructure">Infrastructure</button>
+              <button class="filter-btn btn-outline" data-filter="buildings" style="color: var(--color-primary); border-color: var(--color-primary);" data-i18n="projects_filter_buildings">Buildings</button>
+              <button class="filter-btn btn-outline" data-filter="energy" style="color: var(--color-primary); border-color: var(--color-primary);" data-i18n="projects_filter_energy">Energy</button>
             </div>
             <div class="search-box">
-              <input type="text" id="project-search" placeholder="Search projects..." class="form-control">
+              <input type="text" id="project-search" placeholder="Search projects..." class="form-control" data-i18n-placeholder="projects_search_placeholder">
             </div>
           </div>
 
           <div class="grid grid-3" id="project-grid">
             <!-- Project 1 -->
             <div class="project-card-wrapper reveal reveal-up" data-category="infrastructure">
-              <div class="card">
+              <a href="project-detail.html" class="card block hover:no-underline">
                 <img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=600" alt="Rod El Farag" class="card-img" referrerPolicy="no-referrer">
                 <div class="card-content">
-                  <div class="badge">Infrastructure</div>
-                  <h3>Rod El Farag Axis Bridge</h3>
-                  <p class="text-body">The world's widest cable-stayed bridge.</p>
+                  <div class="badge" data-i18n="badge_infrastructure">Infrastructure</div>
+                  <h3 data-i18n="project_rod_title">Rod El Farag Axis Bridge</h3>
+                  <p class="text-body mb-md" data-i18n="project_rod_desc">The world's widest cable-stayed bridge.</p>
+                  <span class="text-gold text-small font-bold" data-i18n="btn_view_details">View Details →</span>
                 </div>
-              </div>
+              </a>
             </div>
             <!-- Project 2 -->
             <div class="project-card-wrapper reveal reveal-up" data-category="energy">
-              <div class="card">
+              <a href="project-detail.html" class="card block hover:no-underline">
                 <img src="https://images.unsplash.com/photo-1584464431734-7c7036618e7e?w=600" alt="Aswan Dam" class="card-img" referrerPolicy="no-referrer">
                 <div class="card-content">
-                  <div class="badge">Energy</div>
-                  <h3>Aswan High Dam</h3>
-                  <p class="text-body">Iconic hydro-electric power plant.</p>
+                  <div class="badge" data-i18n="badge_energy">Energy</div>
+                  <h3 data-i18n="project_aswan_title">Aswan High Dam</h3>
+                  <p class="text-body mb-md" data-i18n="project_aswan_desc">Iconic hydro-electric power plant.</p>
+                  <span class="text-gold text-small font-bold" data-i18n="btn_view_details">View Details →</span>
                 </div>
-              </div>
+              </a>
             </div>
             <!-- Project 3 -->
             <div class="project-card-wrapper reveal reveal-up" data-category="infrastructure">
-              <div class="card">
+              <a href="project-detail.html" class="card block hover:no-underline">
                 <img src="https://images.unsplash.com/photo-1519011985187-444d62641929?w=600" alt="Cairo Metro" class="card-img" referrerPolicy="no-referrer">
                 <div class="card-content">
-                  <div class="badge">Transport</div>
-                  <h3>Cairo Metro Line 3</h3>
-                  <p class="text-body">Modern urban transit system.</p>
+                  <div class="badge" data-i18n="badge_transport">Transport</div>
+                  <h3 data-i18n="project_metro_title">Cairo Metro Line 3</h3>
+                  <p class="text-body mb-md" data-i18n="project_metro_desc">Modern urban transit system.</p>
+                  <span class="text-gold text-small font-bold" data-i18n="btn_view_details">View Details →</span>
                 </div>
-              </div>
+              </a>
             </div>
             <!-- Project 4 -->
             <div class="project-card-wrapper reveal reveal-up" data-category="buildings">
-              <div class="card">
+              <a href="project-detail.html" class="card block hover:no-underline">
                 <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600" alt="NAC" class="card-img" referrerPolicy="no-referrer">
                 <div class="card-content">
-                  <div class="badge">Buildings</div>
-                  <h3>New Administrative Capital</h3>
-                  <p class="text-body">Developing the future of Egypt's governance.</p>
+                  <div class="badge" data-i18n="badge_buildings">Buildings</div>
+                  <h3 data-i18n="project_nac_title">New Administrative Capital</h3>
+                  <p class="text-body mb-md" data-i18n="project_nac_desc">Developing the future of Egypt's governance.</p>
+                  <span class="text-gold text-small font-bold" data-i18n="btn_view_details">View Details →</span>
                 </div>
-              </div>
+              </a>
             </div>
             <!-- Project 5 -->
             <div class="project-card-wrapper reveal reveal-up" data-category="buildings">
-              <div class="card">
+              <a href="project-detail.html" class="card block hover:no-underline">
                 <img src="https://images.unsplash.com/photo-1503387762-592dee58c162?w=600" alt="GEM" class="card-img" referrerPolicy="no-referrer">
                 <div class="card-content">
-                  <div class="badge">Cultural</div>
-                  <h3>Grand Egyptian Museum</h3>
-                  <p class="text-body">The largest archaeological museum in the world.</p>
+                  <div class="badge" data-i18n="badge_cultural">Cultural</div>
+                  <h3 data-i18n="project_gem_title">Grand Egyptian Museum</h3>
+                  <p class="text-body mb-md" data-i18n="project_gem_desc">The largest archaeological museum in the world.</p>
+                  <span class="text-gold text-small font-bold" data-i18n="btn_view_details">View Details →</span>
                 </div>
-              </div>
+              </a>
             </div>
             <!-- Project 6 -->
             <div class="project-card-wrapper reveal reveal-up" data-category="water">
-              <div class="card">
+              <a href="project-detail.html" class="card block hover:no-underline">
                 <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600" alt="Water" class="card-img" referrerPolicy="no-referrer">
                 <div class="card-content">
-                  <div class="badge">Water</div>
-                  <h3>Bahr El Baqar Plant</h3>
-                  <p class="text-body">World's largest water treatment plant.</p>
+                  <div class="badge" data-i18n="badge_water">Water</div>
+                  <h3 data-i18n="project_bahr_title">Bahr El Baqar Plant</h3>
+                  <p class="text-body mb-md" data-i18n="project_bahr_desc">World's largest water treatment plant.</p>
+                  <span class="text-gold text-small font-bold" data-i18n="btn_view_details">View Details →</span>
                 </div>
+              </a>
+            </div>
+            <!-- Project 7 -->
+            <div class="project-card-wrapper reveal reveal-up" data-category="buildings">
+              <a href="project-detail.html" class="card block hover:no-underline">
+                <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=600" alt="Mosque" class="card-img" referrerPolicy="no-referrer">
+                <div class="card-content">
+                  <div class="badge" data-i18n="badge_buildings">Religious</div>
+                  <h3 data-i18n="project_mosque_title">Al-Fattah Al-Aleem Mosque</h3>
+                  <p class="text-body mb-md" data-i18n="project_mosque_desc">One of the largest mosques in the region.</p>
+                  <span class="text-gold text-small font-bold" data-i18n="btn_view_details">View Details →</span>
+                </div>
+              </a>
+            </div>
+            <!-- Project 8 -->
+            <div class="project-card-wrapper reveal reveal-up" data-category="infrastructure">
+              <a href="project-detail.html" class="card block hover:no-underline">
+                <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600" alt="Stadium" class="card-img" referrerPolicy="no-referrer">
+                <div class="card-content">
+                  <div class="badge" data-i18n="badge_infrastructure">Sports</div>
+                  <h3 data-i18n="project_stadium_title">Borg El Arab Stadium</h3>
+                  <p class="text-body mb-md" data-i18n="project_stadium_desc">A world-class multi-purpose stadium.</p>
+                  <span class="text-gold text-small font-bold" data-i18n="btn_view_details">View Details →</span>
+                </div>
+              </a>
+            </div>
+            <!-- Project 9 -->
+            <div class="project-card-wrapper reveal reveal-up" data-category="infrastructure">
+              <a href="project-detail.html" class="card block hover:no-underline">
+                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600" alt="Tunnel" class="card-img" referrerPolicy="no-referrer">
+                <div class="card-content">
+                  <div class="badge" data-i18n="badge_transport">Infrastructure</div>
+                  <h3 data-i18n="project_tunnel_title">Suez Canal Tunnels</h3>
+                  <p class="text-body mb-md" data-i18n="project_tunnel_desc">Strategic tunnels connecting Sinai to the mainland.</p>
+                  <span class="text-gold text-small font-bold" data-i18n="btn_view_details">View Details →</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Global Project Gallery -->
+      <section class="section section-light">
+        <div class="container">
+          <div class="section-title text-center">
+            <span class="text-small text-gold" data-i18n="gallery_subtitle">VISUAL JOURNEY</span>
+            <h2 data-i18n="project_gallery_title">Project Gallery</h2>
+            <p class="max-w-2xl mx-auto opacity-70" data-i18n="gallery_desc">A glimpse into our diverse portfolio of landmark projects across the globe.</p>
+          </div>
+          <div class="grid grid-4 gap-md">
+            <div class="reveal reveal-up overflow-hidden radius-card group h-64">
+              <img src="https://images.unsplash.com/photo-1584464431734-7c7036618e7e?w=600&h=600&fit=crop" alt="Aswan Dam" class="w-full h-full object-cover transition-slow group-hover:scale-110" referrerPolicy="no-referrer">
+              <div class="overlay flex-center opacity-0 group-hover:opacity-100 transition-slow">
+                <span class="text-white font-bold">Aswan High Dam</span>
+              </div>
+            </div>
+            <div class="reveal reveal-up overflow-hidden radius-card group h-64" style="transition-delay: 0.1s;">
+              <img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=600&h=600&fit=crop" alt="Bridge" class="w-full h-full object-cover transition-slow group-hover:scale-110" referrerPolicy="no-referrer">
+              <div class="overlay flex-center opacity-0 group-hover:opacity-100 transition-slow">
+                <span class="text-white font-bold">Rod El Farag Bridge</span>
+              </div>
+            </div>
+            <div class="reveal reveal-up overflow-hidden radius-card group h-64" style="transition-delay: 0.2s;">
+              <img src="https://images.unsplash.com/photo-1519011985187-444d62641929?w=600&h=600&fit=crop" alt="Metro" class="w-full h-full object-cover transition-slow group-hover:scale-110" referrerPolicy="no-referrer">
+              <div class="overlay flex-center opacity-0 group-hover:opacity-100 transition-slow">
+                <span class="text-white font-bold">Cairo Metro</span>
+              </div>
+            </div>
+            <div class="reveal reveal-up overflow-hidden radius-card group h-64" style="transition-delay: 0.3s;">
+              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=600&fit=crop" alt="NAC" class="w-full h-full object-cover transition-slow group-hover:scale-110" referrerPolicy="no-referrer">
+              <div class="overlay flex-center opacity-0 group-hover:opacity-100 transition-slow">
+                <span class="text-white font-bold">New Capital</span>
               </div>
             </div>
           </div>
@@ -154,7 +251,7 @@
 
     <footer class="footer bg-navy text-white pt-4xl pb-xl">
       <div class="container text-center">
-        <p class="text-small opacity-100">© 2024 Arab Contractors. All rights reserved.</p>
+        <p class="text-small opacity-100">© <span id="footer-year"></span> Arab Contractors. All rights reserved.</p>
       </div>
     </footer>
 

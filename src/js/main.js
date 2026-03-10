@@ -13,6 +13,7 @@ import { initTranslation } from './translation.js';
 
 function initApp() {
   console.log('Arab Contractors Website Initialized');
+  console.log('Current Page:', window.location.pathname);
   
   initTranslation();
   initNavigation();
@@ -22,6 +23,12 @@ function initApp() {
   initProjects();
   initForms();
   initYouTube();
+
+  // Set current year in footer
+  const footerYear = document.getElementById('footer-year');
+  if (footerYear) {
+    footerYear.textContent = new Date().getFullYear();
+  }
 
   // Back to Top Button
   const backToTop = document.querySelector('.back-to-top');

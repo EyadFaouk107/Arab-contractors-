@@ -3,9 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project Detail | Arab Contractors - المقاولون العرب</title>
-    <meta name="description" content="Detailed view of a landmark project.">
-    <link rel="icon" type="image/png" href="https://www.arabcont.com/favicon.ico">
+    <title>Project Details | Arab Contractors - المقاولون العرب</title>
+    <meta name="description" content="Detailed information about landmark projects executed by Arab Contractors across various sectors and regions.">
+    <meta name="keywords" content="Construction projects, engineering details, landmark buildings, infrastructure projects, Arab Contractors portfolio">
+    <meta name="author" content="Arab Contractors">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ais-dev-a7v5tkqjchqiehcescqkvf-174852774225.europe-west1.run.app/project-detail.html">
+    <meta property="og:title" content="Project Details | Arab Contractors - المقاولون العرب">
+    <meta property="og:description" content="Detailed information about landmark projects executed by Arab Contractors across various sectors and regions.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&h=630&fit=crop">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ais-dev-a7v5tkqjchqiehcescqkvf-174852774225.europe-west1.run.app/project-detail.html">
+    <meta property="twitter:title" content="Project Details | Arab Contractors - المقاولون العرب">
+    <meta property="twitter:description" content="Detailed information about landmark projects executed by Arab Contractors across various sectors and regions.">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&h=630&fit=crop">
+
+    <!-- Favicon -->
   </head>
   <body>
     <!-- Header -->
@@ -26,7 +44,6 @@
             <li><a href="projects.html" class="nav-link active">Projects</a></li>
             <li><a href="sectors.html" class="nav-link">Sectors</a></li>
             <li><a href="news.html" class="nav-link">News</a></li>
-            <li><a href="careers.html" class="nav-link">Careers</a></li>
             <li><a href="contact.html" class="nav-link">Contact</a></li>
           </ul>
         </nav>
@@ -51,7 +68,6 @@
         <li><a href="projects.html">Projects</a></li>
         <li><a href="sectors.html">Sectors</a></li>
         <li><a href="news.html">News</a></li>
-        <li><a href="careers.html">Careers</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
@@ -97,13 +113,38 @@
               </div>
             </div>
           </div>
+
+          <!-- Project Gallery -->
+          <div class="mt-4xl">
+            <h2 class="text-center mb-2xl" data-i18n="project_gallery_title">Project Gallery</h2>
+            <div class="grid grid-3 gap-md">
+              <div class="reveal reveal-up overflow-hidden radius-card group">
+                <img src="https://images.unsplash.com/photo-1541888086225-f6404f45af53?w=600&h=450&fit=crop" alt="Gallery 1" class="w-full h-full object-cover transition-slow group-hover:scale-110" referrerPolicy="no-referrer">
+              </div>
+              <div class="reveal reveal-up overflow-hidden radius-card group" style="transition-delay: 0.1s;">
+                <img src="https://images.unsplash.com/photo-1503387762-592dee582a7b?w=600&h=450&fit=crop" alt="Gallery 2" class="w-full h-full object-cover transition-slow group-hover:scale-110" referrerPolicy="no-referrer">
+              </div>
+              <div class="reveal reveal-up overflow-hidden radius-card group" style="transition-delay: 0.2s;">
+                <img src="https://images.unsplash.com/photo-1590674899484-d5640e854abe?w=600&h=450&fit=crop" alt="Gallery 3" class="w-full h-full object-cover transition-slow group-hover:scale-110" referrerPolicy="no-referrer">
+              </div>
+              <div class="reveal reveal-up overflow-hidden radius-card group">
+                <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=600&h=450&fit=crop" alt="Gallery 4" class="w-full h-full object-cover transition-slow group-hover:scale-110" referrerPolicy="no-referrer">
+              </div>
+              <div class="reveal reveal-up overflow-hidden radius-card group" style="transition-delay: 0.1s;">
+                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=450&fit=crop" alt="Gallery 5" class="w-full h-full object-cover transition-slow group-hover:scale-110" referrerPolicy="no-referrer">
+              </div>
+              <div class="reveal reveal-up overflow-hidden radius-card group" style="transition-delay: 0.2s;">
+                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=450&fit=crop" alt="Gallery 6" class="w-full h-full object-cover transition-slow group-hover:scale-110" referrerPolicy="no-referrer">
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="footer bg-navy text-white pt-4xl pb-xl">
       <div class="container text-center">
-        <p class="text-small opacity-100">© 2024 Arab Contractors. All rights reserved.</p>
+        <p class="text-small opacity-100">© <span id="footer-year"></span> Arab Contractors. All rights reserved.</p>
       </div>
     </footer>
 

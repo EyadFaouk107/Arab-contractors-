@@ -21,15 +21,6 @@
   .grid-4, .grid-4-lg { grid-template-columns: repeat(4, 1fr); }
   
   .nav-mobile-toggle { display: none; }
-  
-  .video-featured {
-    grid-column: span 2;
-    grid-row: span 2;
-  }
-  
-  .video-featured .card-content {
-    justify-content: center;
-  }
 }
 
 /* Specific Layout Adjustments */
@@ -99,5 +90,46 @@
 @media (min-width: 1440px) {
   :root {
     --container-max: 1400px;
+  }
+}
+
+/* RTL Adjustments */
+html[dir="rtl"] .header .container {
+  flex-wrap: nowrap;
+}
+
+html[dir="rtl"] .logo svg {
+  direction: ltr;
+}
+
+html[dir="rtl"] .nav-desktop {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] .nav-desktop ul {
+  gap: var(--space-md) !important;
+}
+
+html[dir="rtl"] .nav-link {
+  font-size: 0.95rem;
+  text-align: right;
+}
+
+html[dir="rtl"] .mega-menu .grid {
+  direction: rtl;
+}
+
+html[dir="rtl"] .mega-menu h4,
+html[dir="rtl"] .mega-menu ul {
+  text-align: right;
+}
+
+@media (max-width: 1150px) and (min-width: 1024px) {
+  html[dir="rtl"] .nav-desktop ul {
+    gap: var(--space-sm) !important;
+  }
+  html[dir="rtl"] .nav-link {
+    font-size: 0.9rem;
   }
 }
