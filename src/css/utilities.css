@@ -62,6 +62,9 @@ html {
 }
 .text-center { text-align: center; }
 .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+.cursor-pointer { cursor: pointer; }
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
 /* Hide Google Translate Banner */
 .goog-te-banner-frame { display: none !important; }

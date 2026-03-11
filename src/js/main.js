@@ -10,6 +10,7 @@ import { initProjects } from './projects.js';
 import { initForms } from './forms.js';
 import { initYouTube } from './youtube.js';
 import { initTranslation } from './translation.js';
+import { initProjectDetail } from './project-detail.js';
 
 function initApp() {
   console.log('Arab Contractors Website Initialized');
@@ -23,6 +24,7 @@ function initApp() {
   initProjects();
   initForms();
   initYouTube();
+  initProjectDetail();
 
   // Set current year in footer
   const footerYear = document.getElementById('footer-year');
