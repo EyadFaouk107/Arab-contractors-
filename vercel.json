@@ -1,15 +1,3 @@
 {
-  "version": 2,
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "rewrites": [
-    { "source": "/about", "destination": "/about.html" },
-    { "source": "/news", "destination": "/news.html" },
-    { "source": "/sectors", "destination": "/sectors.html" },
-    { "source": "/projects", "destination": "/projects.html" },
-    { "source": "/gallery", "destination": "/gallery.html" },
-    { "source": "/contact", "destination": "/contact.html" },
-    { "source": "/innovation", "destination": "/innovation.html" },
-    { "source": "/project-detail", "destination": "/project-detail.html" }
-  ]
+  "cleanUrls": true
 }
