@@ -2,13 +2,13 @@ import tailwindcss from '@tailwindcss/vite';
 import legacy from '@vitejs/plugin-legacy';
 import react from '@vitejs/plugin-react';
 import path from 'path';
-import { defineConfig, loadEnv } from 'vite';
+import {defineConfig, loadEnv} from 'vite';
 
-export default defineConfig(({ mode }) => {
+export default defineConfig(({mode}) => {
   const env = loadEnv(mode, '.', '');
   return {
     plugins: [
-      react(),
+      react(), 
       tailwindcss(),
       legacy({
         targets: ['defaults', 'not IE 11'],
@@ -23,8 +23,12 @@ export default defineConfig(({ mode }) => {
         '@': path.resolve(__dirname, '.'),
       },
     },
+    server: {
+      // HMR is disabled in AI Studio via DISABLE_HMR env var.
+      // Do not modify—file watching is disabled to prevent flickering during agent edits.
+      hmr: process.env.DISABLE_HMR !== 'true',
+    },
     build: {
-      outDir: 'dist',
       rollupOptions: {
         input: {
           main: path.resolve(__dirname, 'index.html'),
@@ -38,10 +42,6 @@ export default defineConfig(({ mode }) => {
           contact: path.resolve(__dirname, 'contact.html'),
         },
       },
-    },
-    server: {
-      // HMR is disabled in AI Studio via DISABLE_HMR env var.
-      hmr: process.env.DISABLE_HMR !== 'true',
     },
   };
 });
