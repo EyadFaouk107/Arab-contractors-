@@ -18,6 +18,13 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://www.arabcont.com/favicon.ico">
+    <script>
+      (function() {
+        const savedTheme = localStorage.getItem('theme');
+        const theme = savedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.classList.add(theme + '-theme');
+      })();
+    </script>
   </head>
   <body>
     <!-- Header -->
@@ -43,6 +50,7 @@
           </ul>
         </nav>
         <div class="nav-actions flex items-center gap-md">
+          <div id="theme-toggle-root"></div>
           <button class="search-trigger"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
           <button class="lang-toggle notranslate">AR</button>
           <button class="nav-mobile-toggle lg:hidden">
@@ -71,7 +79,7 @@
     <main>
       <section class="section-dark py-4xl relative" style="background-image: url('https://images.unsplash.com/photo-1541888086225-f6404f45af53?w=1920'); background-size: cover; background-position: center;">
         <div class="overlay"></div>
-        <div class="container relative z-10 text-center">
+        <div class="container relative z-10 text-center animate-fade-up">
           <h1 class="text-white" data-i18n="gallery_page_title">Visual Gallery</h1>
           <p class="text-white opacity-100" data-i18n="gallery_page_subtitle">Capturing our engineering milestones through the lens</p>
         </div>
@@ -79,15 +87,15 @@
 
       <section class="section">
         <div class="container">
-          <div class="grid grid-3 gap-lg">
+          <div class="grid grid-3 gap-lg stagger-container">
             <!-- Gallery items -->
-            <div class="reveal reveal-up overflow-hidden radius-card group">
+            <div class="overflow-hidden radius-card group">
               <img src="https://images.unsplash.com/photo-1541888086225-f6404f45af53?w=800&h=600&fit=crop" alt="Project 1" class="w-full h-full object-cover transition-slow group-hover:scale-110" referrerPolicy="no-referrer">
             </div>
-            <div class="reveal reveal-up overflow-hidden radius-card group" style="transition-delay: 0.1s;">
+            <div class="overflow-hidden radius-card group">
               <img src="https://images.unsplash.com/photo-1503387762-592dee582a7b?w=800&h=600&fit=crop" alt="Project 2" class="w-full h-full object-cover transition-slow group-hover:scale-110" referrerPolicy="no-referrer">
             </div>
-            <div class="reveal reveal-up overflow-hidden radius-card group" style="transition-delay: 0.2s;">
+            <div class="overflow-hidden radius-card group">
               <img src="https://images.unsplash.com/photo-1590674899484-d5640e854abe?w=800&h=600&fit=crop" alt="Project 3" class="w-full h-full object-cover transition-slow group-hover:scale-110" referrerPolicy="no-referrer">
             </div>
             <div class="reveal reveal-up overflow-hidden radius-card group">
@@ -131,7 +139,7 @@
       </section>
     </main>
 
-    <footer class="footer bg-navy text-white pt-4xl pb-xl">
+    <footer class="footer pt-4xl pb-xl">
       <div class="container text-center">
         <p class="text-small opacity-100">© <span id="footer-year"></span> Arab Contractors. All rights reserved.</p>
       </div>

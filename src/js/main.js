@@ -14,7 +14,13 @@ import { initProjectDetail } from './project-detail.js';
 
 function initApp() {
   console.log('Arab Contractors Website Initialized');
-  console.log('Current Page:', window.location.pathname);
+  
+  // Page Transition Entry
+  document.body.classList.add('is-ready');
+  const main = document.querySelector('main');
+  if (main) {
+    main.classList.add('animate-fade-in');
+  }
   
   initTranslation();
   initNavigation();

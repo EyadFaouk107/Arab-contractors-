@@ -24,6 +24,13 @@
     <meta property="twitter:image" content="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&h=630&fit=crop">
 
     <!-- Favicon -->
+    <script>
+      (function() {
+        const savedTheme = localStorage.getItem('theme');
+        const theme = savedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.classList.add(theme + '-theme');
+      })();
+    </script>
   </head>
   <body>
     <!-- Header -->
@@ -49,6 +56,7 @@
           </ul>
         </nav>
         <div class="nav-actions flex-center gap-md">
+          <div id="theme-toggle-root"></div>
           <button class="search-trigger"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
           <button class="lang-toggle notranslate">AR</button>
           <button class="nav-mobile-toggle mobile-only">
@@ -98,9 +106,9 @@
             </div>
           </div>
 
-          <div class="grid grid-3" id="project-grid">
+          <div class="grid grid-3 stagger-container" id="project-grid">
             <!-- Project 1 -->
-            <div class="project-card-wrapper reveal reveal-up" data-category="infrastructure">
+            <div class="project-card-wrapper" data-category="infrastructure">
               <a href="project-detail.html?id=rod-el-farag" class="card block hover:no-underline">
                 <img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=600" alt="Rod El Farag" class="card-img" referrerPolicy="no-referrer">
                 <div class="card-content">
@@ -112,7 +120,7 @@
               </a>
             </div>
             <!-- Project 2 -->
-            <div class="project-card-wrapper reveal reveal-up" data-category="energy">
+            <div class="project-card-wrapper" data-category="energy">
               <a href="project-detail.html?id=aswan-dam" class="card block hover:no-underline">
                 <img src="https://images.unsplash.com/photo-1584464431734-7c7036618e7e?w=600" alt="Aswan Dam" class="card-img" referrerPolicy="no-referrer">
                 <div class="card-content">
@@ -124,7 +132,7 @@
               </a>
             </div>
             <!-- Project 3 -->
-            <div class="project-card-wrapper reveal reveal-up" data-category="infrastructure">
+            <div class="project-card-wrapper" data-category="infrastructure">
               <a href="project-detail.html?id=cairo-metro" class="card block hover:no-underline">
                 <img src="https://images.unsplash.com/photo-1519011985187-444d62641929?w=600" alt="Cairo Metro" class="card-img" referrerPolicy="no-referrer">
                 <div class="card-content">
@@ -136,7 +144,7 @@
               </a>
             </div>
             <!-- Project 4 -->
-            <div class="project-card-wrapper reveal reveal-up" data-category="buildings">
+            <div class="project-card-wrapper" data-category="buildings">
               <a href="project-detail.html?id=new-capital" class="card block hover:no-underline">
                 <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600" alt="NAC" class="card-img" referrerPolicy="no-referrer">
                 <div class="card-content">
@@ -273,7 +281,7 @@
       </section>
     </main>
 
-    <footer class="footer bg-navy text-white pt-4xl pb-xl">
+    <footer class="footer pt-4xl pb-xl">
       <div class="container text-center">
         <p class="text-small opacity-100">© <span id="footer-year"></span> Arab Contractors. All rights reserved.</p>
       </div>

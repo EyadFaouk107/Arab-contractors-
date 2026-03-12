@@ -24,6 +24,13 @@
     <meta property="twitter:image" content="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&h=630&fit=crop">
 
     <!-- Favicon -->
+    <script>
+      (function() {
+        const savedTheme = localStorage.getItem('theme');
+        const theme = savedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.classList.add(theme + '-theme');
+      })();
+    </script>
   </head>
   <body>
     <!-- Header -->
@@ -48,6 +55,7 @@
           </ul>
         </nav>
         <div class="nav-actions flex-center gap-md">
+          <div id="theme-toggle-root"></div>
           <button class="search-trigger"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
           <button class="lang-toggle notranslate">AR</button>
           <button class="nav-mobile-toggle mobile-only">
@@ -142,7 +150,7 @@
       </section>
     </main>
 
-    <footer class="footer bg-navy text-white pt-4xl pb-xl">
+    <footer class="footer pt-4xl pb-xl">
       <div class="container text-center">
         <p class="text-small opacity-100">© <span id="footer-year"></span> Arab Contractors. All rights reserved.</p>
       </div>

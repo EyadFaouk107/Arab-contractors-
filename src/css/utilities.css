@@ -51,6 +51,8 @@ html {
 .transition-slow { transition: var(--transition-slow); }
 .text-primary { color: var(--color-primary); }
 .text-gold { color: var(--color-secondary); }
+.text-main { color: var(--text-main); }
+.text-muted { color: var(--text-muted); }
 .mr-sm { margin-inline-end: var(--space-sm); }
 .gap-xs { gap: var(--space-xs); }
 .gap-lg { gap: var(--space-lg); }
