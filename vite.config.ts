@@ -14,7 +14,6 @@ export default defineConfig(({mode}) => {
         targets: ['defaults', 'not IE 11'],
       }),
     ],
-    base: './',
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
       'process.env.YOUTUBE_API_KEY': JSON.stringify(env.YOUTUBE_API_KEY),

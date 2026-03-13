@@ -1,22 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
 import './index.css';
-import App from './App';
+import './js/main.js';
+import ThemeToggle from './components/ThemeToggle';
 import { ThemeProvider } from './context/ThemeContext';
-import { LanguageProvider } from './context/LanguageContext';
 
-const rootElement = document.getElementById('root');
-if (rootElement) {
-  ReactDOM.createRoot(rootElement).render(
+const toggleRoot = document.getElementById('theme-toggle-root');
+if (toggleRoot) {
+  ReactDOM.createRoot(toggleRoot).render(
     <React.StrictMode>
-      <BrowserRouter>
-        <ThemeProvider>
-          <LanguageProvider>
-            <App />
-          </LanguageProvider>
-        </ThemeProvider>
-      </BrowserRouter>
+      <ThemeProvider>
+        <ThemeToggle />
+      </ThemeProvider>
     </React.StrictMode>
   );
 }
