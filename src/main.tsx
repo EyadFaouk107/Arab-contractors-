@@ -1,16 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import './js/main.js';
-import ThemeToggle from './components/ThemeToggle';
+import App from './App';
 import { ThemeProvider } from './context/ThemeContext';
 
-const toggleRoot = document.getElementById('theme-toggle-root');
-if (toggleRoot) {
-  ReactDOM.createRoot(toggleRoot).render(
+const rootElement = document.getElementById('root');
+if (rootElement) {
+  ReactDOM.createRoot(rootElement).render(
     <React.StrictMode>
       <ThemeProvider>
-        <ThemeToggle />
+        <App />
       </ThemeProvider>
     </React.StrictMode>
   );
