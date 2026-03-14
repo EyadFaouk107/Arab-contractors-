@@ -2,33 +2,44 @@ import tailwindcss from '@tailwindcss/vite';
 import legacy from '@vitejs/plugin-legacy';
 import react from '@vitejs/plugin-react';
 import path from 'path';
-import {defineConfig, loadEnv} from 'vite';
+import { fileURLToPath } from 'url';
+import { defineConfig, loadEnv } from 'vite';
 
-export default defineConfig(({mode}) => {
-  const env = loadEnv(mode, '.', '');
+// عشان __dirname مش بتشتغل تلقائي في الـ ESM (type: module)
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, process.cwd(), '');
+  
   return {
+    // 1. ترتيب الـ Plugins مهم لـ Tailwind v4
     plugins: [
-      react(), 
       tailwindcss(),
+      react(), 
       legacy({
         targets: ['defaults', 'not IE 11'],
       }),
     ],
+    // 2. تعريف المتغيرات بشكل يضمن وصولها للـ Client side
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
       'process.env.YOUTUBE_API_KEY': JSON.stringify(env.YOUTUBE_API_KEY),
     },
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, '.'),
+        // الـ @ يفضل يشير لفولدر الـ src لو موجود، أو الجذر
+        '@': path.resolve(__dirname, './'),
       },
     },
     server: {
-      // HMR is disabled in AI Studio via DISABLE_HMR env var.
-      // Do not modify—file watching is disabled to prevent flickering during agent edits.
+      port: 3000,
+      host: '0.0.0.0',
       hmr: process.env.DISABLE_HMR !== 'true',
     },
     build: {
+      outDir: 'dist',
+      emptyOutDir: true,
       rollupOptions: {
         input: {
           main: path.resolve(__dirname, 'index.html'),
