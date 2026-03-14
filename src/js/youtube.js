@@ -163,11 +163,11 @@ function renderVideos(entries, container, isHomePage) {
     const card = document.createElement('div');
     
     if (isHomePage) {
-      card.className = `video-card-compact reveal reveal-up flex-shrink-0`;
+      card.className = `video-card-compact stagger-item flex-shrink-0`;
       card.style.width = '320px';
       card.style.scrollSnapAlign = 'start';
     } else {
-      card.className = `card reveal reveal-up`;
+      card.className = `card stagger-item`;
     }
     
     card.style.transitionDelay = `${delay}s`;

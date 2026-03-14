@@ -1,0 +1,102 @@
+[
+  {
+    "id": "home-hero",
+    "page": "Home",
+    "page_ar": "الرئيسية",
+    "title": "Engineering Tomorrow's Infrastructure Today",
+    "title_ar": "هندسة البنية التحتية للغد اليوم",
+    "content": "One of the largest international construction companies, delivering excellence across the Middle East and Africa.",
+    "content_ar": "واحدة من أكبر شركات المقاولات الدولية، تقدم التميز في جميع أنحاء الشرق الأوسط وأفريقيا.",
+    "url": "index.html#hero"
+  },
+  {
+    "id": "home-about",
+    "page": "Home",
+    "page_ar": "الرئيسية",
+    "title": "Seven Decades of Construction Excellence",
+    "title_ar": "سبعة عقود من التميز الإنشائي",
+    "content": "Founded in 1955 by Osman Ahmed Osman, Arab Contractors has grown into a global engineering powerhouse.",
+    "content_ar": "تأسست في عام 1955 من قبل عثمان أحمد عثمان، ونمت المقاولون العرب لتصبح قوة هندسية عالمية.",
+    "url": "index.html#about"
+  },
+  {
+    "id": "projects-rod",
+    "page": "Projects",
+    "page_ar": "المشاريع",
+    "title": "Rod El Farag Axis Bridge",
+    "title_ar": "كوبري محور روض الفرج",
+    "content": "The world's widest cable-stayed bridge, a masterpiece of modern engineering in Cairo, Egypt.",
+    "content_ar": "أعرض كوبري ملجم في العالم، تحفة هندسية حديثة في القاهرة، مصر.",
+    "url": "projects.html#rod-el-farag"
+  },
+  {
+    "id": "projects-aswan",
+    "page": "Projects",
+    "page_ar": "المشاريع",
+    "title": "Aswan High Dam",
+    "title_ar": "السد العالي بأسوان",
+    "content": "An iconic project that transformed Egypt's energy landscape and agriculture.",
+    "content_ar": "مشروع أيقوني غير مشهد الطاقة والزراعة في مصر.",
+    "url": "projects.html#aswan-dam"
+  },
+  {
+    "id": "sectors-infra",
+    "page": "Sectors",
+    "page_ar": "القطاعات",
+    "title": "Infrastructure & Transport",
+    "title_ar": "البنية التحتية والنقل",
+    "content": "Bridges, tunnels, highways, roads, railways, metro, airports and ports.",
+    "content_ar": "الكباري والأنفاق والطرق السريعة والسكك الحديدية والمترو والمطارات والموانئ.",
+    "url": "sectors.html#infrastructure"
+  },
+  {
+    "id": "sectors-buildings",
+    "page": "Sectors",
+    "page_ar": "القطاعات",
+    "title": "Public Buildings & Housing",
+    "title_ar": "المباني العامة والإسكان",
+    "content": "Residential complexes, administrative buildings, healthcare facilities, educational centers.",
+    "content_ar": "المجمعات السكنية والمباني الإدارية والمرافق الصحية والمراكز التعليمية.",
+    "url": "sectors.html#buildings"
+  },
+  {
+    "id": "news-metro",
+    "page": "News",
+    "page_ar": "الأخبار",
+    "title": "New Contract Signed for Cairo Metro Line 4",
+    "title_ar": "توقيع عقد جديد للخط الرابع لمترو القاهرة",
+    "content": "Arab Contractors awarded the main construction contract for the new metro phase.",
+    "content_ar": "فازت المقاولون العرب بعقد الإنشاء الرئيسي للمرحلة الجديدة من المترو.",
+    "url": "news.html#news-1"
+  },
+  {
+    "id": "about-history",
+    "page": "About",
+    "page_ar": "عن الشركة",
+    "title": "History & Heritage",
+    "title_ar": "التاريخ والتراث",
+    "content": "Founded in 1955 by the visionary engineer Osman Ahmed Osman. From the construction of the Aswan High Dam to the world's widest cable-stayed bridge.",
+    "content_ar": "تأسست في عام 1955 من قبل المهندس الرؤيوي عثمان أحمد عثمان. من بناء السد العالي بأسوان إلى أعرض كوبري ملجم في العالم.",
+    "url": "about.html#history"
+  },
+  {
+    "id": "contact-info",
+    "page": "Contact",
+    "page_ar": "اتصل بنا",
+    "title": "Contact Information",
+    "title_ar": "معلومات الاتصال",
+    "content": "Headquarters in Cairo, Egypt. 34 Adly Street. Phone: +20 2 23959500. Email: info@arabcont.com",
+    "content_ar": "المقر الرئيسي في القاهرة، مصر. 34 شارع عدلي. هاتف: +20 2 23959500. بريد إلكتروني: info@arabcont.com",
+    "url": "contact.html#contact-info"
+  },
+  {
+    "id": "gallery-main",
+    "page": "Gallery",
+    "page_ar": "معرض الصور",
+    "title": "Project Gallery",
+    "title_ar": "معرض المشاريع",
+    "content": "A glimpse into our diverse portfolio of landmark projects across the globe.",
+    "content_ar": "لمحة عن محفظتنا المتنوعة من المشاريع البارزة في جميع أنحاء العالم.",
+    "url": "gallery.html#gallery"
+  }
+]

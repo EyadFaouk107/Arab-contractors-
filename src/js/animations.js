@@ -4,13 +4,23 @@
  */
 
 export function initAnimations() {
-  const revealElements = document.querySelectorAll('.reveal, .stagger-container');
+  const revealElements = document.querySelectorAll('.reveal, .stagger-container, .stagger-grid');
 
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('active');
-        // Unobserve to prevent re-triggering and improve performance
+        
+        // Handle staggered grid items
+        if (entry.target.classList.contains('stagger-grid')) {
+          const items = entry.target.querySelectorAll('.stagger-item');
+          items.forEach((item, index) => {
+            setTimeout(() => {
+              item.classList.add('active');
+            }, index * 100); // 100ms stagger delay
+          });
+        }
+
         revealObserver.unobserve(entry.target);
       }
     });
@@ -21,6 +31,26 @@ export function initAnimations() {
 
   revealElements.forEach(el => {
     revealObserver.observe(el);
+  });
+
+  // Add micro-interactions for buttons
+  const buttons = document.querySelectorAll('.btn');
+  buttons.forEach(btn => {
+    btn.addEventListener('mouseenter', (e) => {
+      const x = e.pageX - btn.offsetLeft;
+      const y = e.pageY - btn.offsetTop;
+      
+      const ripple = document.createElement('span');
+      ripple.className = 'btn-ripple';
+      ripple.style.left = `${x}px`;
+      ripple.style.top = `${y}px`;
+      
+      btn.appendChild(ripple);
+      
+      setTimeout(() => {
+        ripple.remove();
+      }, 600);
+    });
   });
 
   // Header scroll effect

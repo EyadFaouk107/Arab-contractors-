@@ -333,7 +333,7 @@ export function initProjectDetail() {
   if (galleryContainer) {
     galleryContainer.innerHTML = data.gallery.map((img, index) => `
       <div class="reveal reveal-up overflow-hidden radius-card group cursor-pointer" style="transition-delay: ${index * 0.1}s;">
-        <img src="${img}" alt="Gallery ${index + 1}" class="w-full h-full object-cover transition-slow group-hover:scale-110" referrerPolicy="no-referrer">
+        <img src="${img}" alt="Gallery ${index + 1}" class="w-full h-full object-cover transition-slow group-hover:scale-110" referrerPolicy="no-referrer" loading="lazy">
       </div>
     `).join('');
 

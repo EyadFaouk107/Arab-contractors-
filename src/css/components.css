@@ -38,27 +38,41 @@
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(245, 158, 11, 0.5);
+  background-color: var(--color-primary-dark);
 }
 
-.btn-primary:hover::before {
-  left: 100%;
+.btn-ripple {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border-radius: 50%;
+  animation: ripple 0.6s linear;
+  width: 0;
+  height: 0;
 }
 
-.btn-outline {
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  color: var(--color-white);
-  background-color: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+@keyframes ripple {
+  from {
+    width: 0;
+    height: 0;
+    opacity: 0.5;
+  }
+  to {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
 }
 
 .btn-outline:hover {
   background-color: var(--color-white);
   color: var(--color-primary);
   border-color: var(--color-white);
-  transform: translateY(-2px) scale(1.02);
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
 }
 
 /* Cards */
@@ -78,27 +92,13 @@
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-strong);
+  transform: translateY(-12px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3);
   border-color: var(--color-secondary);
 }
 
-.card-img-wrapper {
-  position: relative;
-  overflow: hidden;
-  aspect-ratio: 16/10;
-}
-
-.card-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: transform;
-}
-
 .card:hover .card-img {
-  transform: scale(1.08);
+  transform: scale(1.12);
 }
 
 .card-content {
@@ -143,12 +143,47 @@
 
 .form-control {
   width: 100%;
-  padding: 12px;
+  padding: 14px 16px;
   border: 1px solid var(--border-color);
   background-color: var(--bg-card);
   color: var(--text-main);
   border-radius: var(--radius-btn);
-  transition: var(--transition-default);
+  transition: all var(--anim-fast) var(--ease-smooth);
+  font-size: 0.95rem;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 4px rgba(0, 51, 102, 0.15);
+  background-color: var(--color-white);
+  transform: translateY(-1px);
+}
+
+.form-control:hover {
+  border-color: var(--color-primary-light);
+}
+
+.dark-theme .form-control:focus {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.form-control::placeholder {
+  color: var(--text-muted);
+  opacity: 0.6;
+}
+
+.form-control:invalid:not(:placeholder-shown) {
+  border-color: #ef4444;
+}
+
+.form-control:valid:not(:placeholder-shown) {
+  border-color: #10b981;
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 120px;
 }
 
 /* Stats */
@@ -230,7 +265,29 @@
   border-top: 1px solid rgba(255,255,255,0.1);
 }
 
-.hover\:text-gold:hover {
+/* Navigation Links */
+.nav-link {
+  position: relative;
+  padding: 8px 0;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-secondary);
+  transition: width 0.3s var(--ease-smooth);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link:hover {
   color: var(--color-secondary);
 }
 
@@ -265,6 +322,58 @@
 .p-md { padding: var(--space-md); }
 .p-lg { padding: var(--space-lg); }
 .p-xl { padding: var(--space-xl); }
+
+/* Gallery Hover Effects */
+.gallery-item {
+  position: relative;
+  cursor: pointer;
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.8), transparent);
+  opacity: 0;
+  transition: opacity 0.4s var(--ease-smooth);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: var(--space-lg);
+  color: white;
+  z-index: 2;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  transform: translateY(10px);
+  transition: transform 0.4s var(--ease-out-expo);
+}
+
+.gallery-item:hover .gallery-title {
+  transform: translateY(0);
+}
+
+.gallery-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  opacity: 0;
+  transition: all 0.4s var(--ease-out-expo);
+  color: var(--color-secondary);
+  z-index: 3;
+}
+
+.gallery-item:hover .gallery-icon {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
 
 /* Map Container */
 .map-container {
