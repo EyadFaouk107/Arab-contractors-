@@ -36,7 +36,16 @@ const SectorsPage: React.FC = () => {
             {sectors.map((sector, index) => (
               <div key={index} className="card flex-row items-center gap-lg p-lg overflow-hidden">
                 <div className="w-1/3 h-full hidden sm:block">
-                  <img src={sector.image} alt={sector.title} className="w-full h-full object-cover radius-card" referrerPolicy="no-referrer" />
+                  <img 
+                    src={sector.image} 
+                    alt={sector.title} 
+                    className="w-full h-full object-cover radius-card" 
+                    referrerPolicy="no-referrer" 
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.src = 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=600';
+                    }}
+                  />
                 </div>
                 <div className="flex-1">
                   <div className="text-gold mb-md">{sector.icon}</div>

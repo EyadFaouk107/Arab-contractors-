@@ -30,7 +30,16 @@ const AboutPage: React.FC = () => {
             <p className="text-body">{t('about_history_p2')}</p>
           </div>
           <div className="reveal">
-            <img src="https://images.unsplash.com/photo-1541888086225-f6404f45af53?w=800" alt="History" className="radius-card shadow-strong" referrerPolicy="no-referrer" />
+            <img 
+              src="https://images.unsplash.com/photo-1541888086225-f6404f45af53?w=800" 
+              alt="History" 
+              className="radius-card shadow-strong" 
+              referrerPolicy="no-referrer" 
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                target.src = 'https://images.unsplash.com/photo-1541888086225-f6404f45af53?w=800';
+              }}
+            />
           </div>
         </div>
       </section>
@@ -80,6 +89,10 @@ const AboutPage: React.FC = () => {
                     alt="Leader" 
                     className="w-full h-full object-cover transition-slow group-hover:scale-110"
                     referrerPolicy="no-referrer"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.src = 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop';
+                    }}
                   />
                 </div>
                 <h4 className="mb-xs">{t(`about_leader_${i}_name`)}</h4>

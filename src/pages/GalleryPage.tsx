@@ -48,6 +48,10 @@ const GalleryPage: React.FC = () => {
                   alt={img.title} 
                   className="w-full h-full object-cover transition-slow group-hover:scale-110"
                   referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = 'https://images.unsplash.com/photo-1503387762-592dee58c162?w=800';
+                  }}
                 />
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-default flex-center">
                   <div className="text-center p-md">
@@ -75,6 +79,10 @@ const GalleryPage: React.FC = () => {
             alt="Full view" 
             className="max-w-full max-h-full radius-card shadow-strong"
             referrerPolicy="no-referrer"
+            onError={(e) => {
+              const target = e.target as HTMLImageElement;
+              target.src = 'https://images.unsplash.com/photo-1503387762-592dee58c162?w=1200';
+            }}
           />
         </div>
       )}

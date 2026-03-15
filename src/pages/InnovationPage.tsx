@@ -48,7 +48,16 @@ const InnovationPage: React.FC = () => {
               </div>
             </div>
             <div className="reveal">
-              <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?w=800" alt="Innovation" className="radius-card shadow-strong" referrerPolicy="no-referrer" />
+              <img 
+                src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?w=800" 
+                alt="Innovation" 
+                className="radius-card shadow-strong" 
+                referrerPolicy="no-referrer" 
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.src = 'https://images.unsplash.com/photo-1581094288338-2314dddb7ece?w=800';
+                }}
+              />
             </div>
           </div>
 

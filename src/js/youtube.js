@@ -157,7 +157,7 @@ function renderVideos(entries, container, isHomePage) {
       videoId = match[1];
     }
     
-    const thumbnail = entry.thumbnail || (videoId ? `https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg` : 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600');
+    const thumbnail = entry.thumbnail || (videoId ? `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg` : 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600');
     
     const delay = index * 0.1;
     const card = document.createElement('div');
@@ -171,13 +171,21 @@ function renderVideos(entries, container, isHomePage) {
     }
     
     card.style.transitionDelay = `${delay}s`;
+    card.style.zIndex = "5"; // Ensure it's above background particles but below header
     card.innerHTML = `
       <a href="${link}" target="_blank" rel="noopener noreferrer" class="block h-full group">
-        <div class="relative overflow-hidden radius-card" style="padding-top: 56.25%;">
-          <img src="${thumbnail}" alt="${title}" class="absolute top-0 left-0 w-full h-full object-cover transition-slow group-hover:scale-105" referrerPolicy="no-referrer" loading="lazy">
-          <div class="absolute inset-0 flex-center bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-default">
-            <div class="w-12 h-12 rounded-full bg-gold flex-center shadow-strong transform scale-90 group-hover:scale-100 transition-bounce">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+        <div class="video-container radius-card" style="background-color: #000;">
+          <img 
+            src="${thumbnail}" 
+            alt="${title}" 
+            class="absolute top-0 left-0 w-full h-full object-cover transition-slow group-hover:scale-110 group-hover:opacity-80" 
+            referrerPolicy="no-referrer" 
+            loading="lazy"
+            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600';"
+          >
+          <div class="absolute inset-0 flex-center bg-black/20 opacity-0 group-hover:opacity-100 transition-default">
+            <div class="w-14 h-14 rounded-full bg-gold flex-center shadow-strong transform scale-75 group-hover:scale-100 transition-bounce">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
             </div>
           </div>
         </div>
@@ -192,8 +200,8 @@ function renderVideos(entries, container, isHomePage) {
 
   // Trigger reveal animations
   setTimeout(() => {
-    const reveals = container.querySelectorAll('.reveal');
-    reveals.forEach(el => el.classList.add('active'));
+    const items = container.querySelectorAll('.stagger-item');
+    items.forEach(el => el.classList.add('active'));
   }, 100);
 }
 

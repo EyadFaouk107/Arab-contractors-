@@ -46,13 +46,13 @@
         </a>
         <nav class="nav-desktop">
           <ul class="flex gap-xl">
-            <li><a href="index.html" class="nav-link">Home</a></li>
-            <li><a href="about.html" class="nav-link">About</a></li>
-            <li><a href="projects.html" class="nav-link active">Projects</a></li>
-            <li><a href="sectors.html" class="nav-link">Sectors</a></li>
-            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
-            <li><a href="news.html" class="nav-link">News</a></li>
-            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+            <li><a href="about.html" class="nav-link" data-i18n="nav_about">About</a></li>
+            <li><a href="projects.html" class="nav-link active" data-i18n="nav_projects">Projects</a></li>
+            <li><a href="sectors.html" class="nav-link" data-i18n="nav_sectors">Sectors</a></li>
+            <li><a href="gallery.html" class="nav-link" data-i18n="nav_gallery">Gallery</a></li>
+            <li><a href="news.html" class="nav-link" data-i18n="nav_news">News</a></li>
+            <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a></li>
           </ul>
         </nav>
         <div class="nav-actions flex-center gap-md">
@@ -66,24 +66,44 @@
       </div>
     </header>
 
+    <!-- Mobile Drawer -->
+    <div class="drawer-overlay"></div>
     <div class="nav-drawer">
       <div class="drawer-header flex-between p-lg">
-        <span class="text-small">MENU</span>
+        <div class="logo flex-center">
+          <svg width="120" height="40" viewBox="0 0 180 60" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="30" cy="30" r="25" fill="#003366" />
+            <text x="30" y="38" font-family="Arial" font-size="24" fill="white" text-anchor="middle" font-weight="bold">AC</text>
+          </svg>
+        </div>
         <button class="nav-close"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
       </div>
-      <ul class="drawer-links p-lg">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="sectors.html">Sectors</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+      <div class="drawer-content">
+        <ul class="drawer-links">
+          <li><a href="index.html" data-i18n="nav_home">Home <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></a></li>
+          <li><a href="about.html" data-i18n="nav_about">About <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></a></li>
+          <li><a href="projects.html" class="active" data-i18n="nav_projects">Projects <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></a></li>
+          <li><a href="sectors.html" data-i18n="nav_sectors">Sectors <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></a></li>
+          <li><a href="gallery.html" data-i18n="nav_gallery">Gallery <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></a></li>
+          <li><a href="news.html" data-i18n="nav_news">News <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></a></li>
+          <li><a href="contact.html" data-i18n="nav_contact">Contact <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></a></li>
+        </ul>
+      </div>
+      <div class="drawer-footer">
+        <div class="flex-between mb-md">
+          <span class="text-small font-bold" data-i18n="footer_social_title">FOLLOW US</span>
+          <div class="drawer-social">
+            <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a>
+            <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+          </div>
+        </div>
+        <button class="btn btn-primary w-full lang-toggle-mobile notranslate">ARABIC - العربية</button>
+      </div>
     </div>
 
     <main>
-      <section class="section-dark py-4xl relative" style="background-image: url('https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=1920'); background-size: cover; background-position: center;">
+      <section class="section-dark py-4xl relative" style="background-image: url('https://www.arabcont.com/images/projects/project-1.jpg'), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920'); background-size: cover; background-position: center;">
         <div class="overlay"></div>
         <div class="container relative z-10 text-center">
           <h1 class="text-white" data-i18n="projects_page_title">Our Projects</h1>
@@ -96,10 +116,11 @@
           <!-- Filter Bar -->
           <div class="flex-between mb-3xl p-md bg-neutral-light radius-card">
             <div class="flex gap-md">
-              <button class="filter-btn active btn-outline" data-filter="all" style="color: var(--color-primary); border-color: var(--color-primary);" data-i18n="projects_filter_all">All</button>
-              <button class="filter-btn btn-outline" data-filter="infrastructure" style="color: var(--color-primary); border-color: var(--color-primary);" data-i18n="projects_filter_infrastructure">Infrastructure</button>
-              <button class="filter-btn btn-outline" data-filter="buildings" style="color: var(--color-primary); border-color: var(--color-primary);" data-i18n="projects_filter_buildings">Buildings</button>
-              <button class="filter-btn btn-outline" data-filter="energy" style="color: var(--color-primary); border-color: var(--color-primary);" data-i18n="projects_filter_energy">Energy</button>
+              <button class="filter-btn active btn-outline" data-filter="all" data-i18n="projects_filter_all">All</button>
+              <button class="filter-btn btn-outline" data-filter="infrastructure" data-i18n="projects_filter_infrastructure">Infrastructure</button>
+              <button class="filter-btn btn-outline" data-filter="buildings" data-i18n="projects_filter_buildings">Buildings</button>
+              <button class="filter-btn btn-outline" data-filter="energy" data-i18n="projects_filter_energy">Energy</button>
+              <button class="filter-btn btn-outline" data-filter="water" data-i18n="projects_filter_water">Water</button>
             </div>
             <div class="search-box">
               <input type="text" id="project-search" placeholder="Search projects..." class="form-control" data-i18n-placeholder="projects_search_placeholder">
@@ -110,7 +131,7 @@
             <!-- Project 1 -->
             <div class="project-card-wrapper stagger-item" data-category="infrastructure">
               <a href="project-detail.html?id=rod-el-farag" class="card block hover:no-underline">
-                <img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=600" alt="Rod El Farag" class="card-img w-full h-48 object-cover" referrerPolicy="no-referrer" loading="lazy">
+                <img src="https://www.arabcont.com/images/projects/project-1.jpg" alt="Rod El Farag" class="card-img w-full h-48 object-cover" onerror="this.src='https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=800';" referrerPolicy="no-referrer" loading="lazy">
                 <div class="card-content">
                   <div class="badge" data-i18n="badge_infrastructure">Infrastructure</div>
                   <h3 data-i18n="project_rod_title">Rod El Farag Axis Bridge</h3>
@@ -122,7 +143,7 @@
             <!-- Project 2 -->
             <div class="project-card-wrapper stagger-item" data-category="energy">
               <a href="project-detail.html?id=aswan-dam" class="card block hover:no-underline">
-                <img src="https://images.unsplash.com/photo-1584464431734-7c7036618e7e?w=600" alt="Aswan Dam" class="card-img w-full h-48 object-cover" referrerPolicy="no-referrer" loading="lazy">
+                <img src="https://www.arabcont.com/images/projects/project-2.jpg" alt="Aswan Dam" class="card-img w-full h-48 object-cover" onerror="this.src='https://images.unsplash.com/photo-1503387762-592dee582a7b?w=800';" referrerPolicy="no-referrer" loading="lazy">
                 <div class="card-content">
                   <div class="badge" data-i18n="badge_energy">Energy</div>
                   <h3 data-i18n="project_aswan_title">Aswan High Dam</h3>
@@ -134,7 +155,7 @@
             <!-- Project 3 -->
             <div class="project-card-wrapper stagger-item" data-category="infrastructure">
               <a href="project-detail.html?id=cairo-metro" class="card block hover:no-underline">
-                <img src="https://images.unsplash.com/photo-1519011985187-444d62641929?w=600" alt="Cairo Metro" class="card-img w-full h-48 object-cover" referrerPolicy="no-referrer" loading="lazy">
+                <img src="https://www.arabcont.com/images/projects/project-3.jpg" alt="Cairo Metro" class="card-img w-full h-48 object-cover" onerror="this.src='https://images.unsplash.com/photo-1590674899484-d5640e854abe?w=800';" referrerPolicy="no-referrer" loading="lazy">
                 <div class="card-content">
                   <div class="badge" data-i18n="badge_transport">Transport</div>
                   <h3 data-i18n="project_metro_title">Cairo Metro Line 3</h3>
@@ -146,7 +167,7 @@
             <!-- Project 4 -->
             <div class="project-card-wrapper stagger-item" data-category="buildings">
               <a href="project-detail.html?id=new-capital" class="card block hover:no-underline">
-                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600" alt="NAC" class="card-img w-full h-48 object-cover" referrerPolicy="no-referrer" loading="lazy">
+                <img src="https://www.arabcont.com/images/projects/project-4.jpg" alt="NAC" class="card-img w-full h-48 object-cover" onerror="this.src='https://images.unsplash.com/photo-1513828583688-c52646db42da?w=800';" referrerPolicy="no-referrer" loading="lazy">
                 <div class="card-content">
                   <div class="badge" data-i18n="badge_buildings">Buildings</div>
                   <h3 data-i18n="project_nac_title">New Administrative Capital</h3>
@@ -158,7 +179,7 @@
             <!-- Project 5 -->
             <div class="project-card-wrapper stagger-item" data-category="buildings">
               <a href="project-detail.html?id=grand-museum" class="card block hover:no-underline">
-                <img src="https://images.unsplash.com/photo-1503387762-592dee58c162?w=600" alt="GEM" class="card-img w-full h-48 object-cover" referrerPolicy="no-referrer" loading="lazy">
+                <img src="https://www.arabcont.com/images/projects/project-5.jpg" alt="GEM" class="card-img w-full h-48 object-cover" onerror="this.src='https://images.unsplash.com/photo-1541963463532-d68292c34b19?w=800';" referrerPolicy="no-referrer" loading="lazy">
                 <div class="card-content">
                   <div class="badge" data-i18n="badge_cultural">Cultural</div>
                   <h3 data-i18n="project_gem_title">Grand Egyptian Museum</h3>
@@ -170,47 +191,11 @@
             <!-- Project 6 -->
             <div class="project-card-wrapper stagger-item" data-category="water">
               <a href="project-detail.html?id=bahr-baqar" class="card block hover:no-underline">
-                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600" alt="Water" class="card-img w-full h-48 object-cover" referrerPolicy="no-referrer" loading="lazy">
+                <img src="https://www.arabcont.com/images/projects/project-6.jpg" alt="Water" class="card-img w-full h-48 object-cover" onerror="this.src='https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800';" referrerPolicy="no-referrer" loading="lazy">
                 <div class="card-content">
                   <div class="badge" data-i18n="badge_water">Water</div>
                   <h3 data-i18n="project_bahr_title">Bahr El Baqar Plant</h3>
                   <p class="text-body mb-md" data-i18n="project_bahr_desc">World's largest water treatment plant.</p>
-                  <span class="text-gold text-small font-bold" data-i18n="btn_view_details">View Details →</span>
-                </div>
-              </a>
-            </div>
-            <!-- Project 7 -->
-            <div class="project-card-wrapper stagger-item" data-category="buildings">
-              <a href="project-detail.html?id=fattah-mosque" class="card block hover:no-underline">
-                <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=600" alt="Mosque" class="card-img w-full h-48 object-cover" referrerPolicy="no-referrer" loading="lazy">
-                <div class="card-content">
-                  <div class="badge" data-i18n="badge_buildings">Religious</div>
-                  <h3 data-i18n="project_mosque_title">Al-Fattah Al-Aleem Mosque</h3>
-                  <p class="text-body mb-md" data-i18n="project_mosque_desc">One of the largest mosques in the region.</p>
-                  <span class="text-gold text-small font-bold" data-i18n="btn_view_details">View Details →</span>
-                </div>
-              </a>
-            </div>
-            <!-- Project 8 -->
-            <div class="project-card-wrapper stagger-item" data-category="infrastructure">
-              <a href="project-detail.html?id=borg-stadium" class="card block hover:no-underline">
-                <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600" alt="Stadium" class="card-img w-full h-48 object-cover" referrerPolicy="no-referrer" loading="lazy">
-                <div class="card-content">
-                  <div class="badge" data-i18n="badge_infrastructure">Sports</div>
-                  <h3 data-i18n="project_stadium_title">Borg El Arab Stadium</h3>
-                  <p class="text-body mb-md" data-i18n="project_stadium_desc">A world-class multi-purpose stadium.</p>
-                  <span class="text-gold text-small font-bold" data-i18n="btn_view_details">View Details →</span>
-                </div>
-              </a>
-            </div>
-            <!-- Project 9 -->
-            <div class="project-card-wrapper stagger-item" data-category="infrastructure">
-              <a href="project-detail.html?id=suez-tunnels" class="card block hover:no-underline">
-                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600" alt="Tunnel" class="card-img w-full h-48 object-cover" referrerPolicy="no-referrer" loading="lazy">
-                <div class="card-content">
-                  <div class="badge" data-i18n="badge_transport">Infrastructure</div>
-                  <h3 data-i18n="project_tunnel_title">Suez Canal Tunnels</h3>
-                  <p class="text-body mb-md" data-i18n="project_tunnel_desc">Strategic tunnels connecting Sinai to the mainland.</p>
                   <span class="text-gold text-small font-bold" data-i18n="btn_view_details">View Details →</span>
                 </div>
               </a>
@@ -225,55 +210,31 @@
           <div class="section-title text-center">
             <span class="text-small text-gold" data-i18n="gallery_subtitle">VISUAL JOURNEY</span>
             <h2 data-i18n="project_gallery_title">Project Gallery</h2>
-            <p class="max-w-2xl mx-auto opacity-70" data-i18n="gallery_desc">A glimpse into our diverse portfolio of landmark projects across the globe.</p>
+            <p class="max-w-2xl mx-auto opacity-70" data-i18n="gallery_subtitle_desc">A glimpse into our diverse portfolio of landmark projects across the globe.</p>
           </div>
           <div class="grid grid-4 gap-md stagger-grid">
             <div class="stagger-item overflow-hidden radius-card group h-64">
-              <img src="https://images.unsplash.com/photo-1584464431734-7c7036618e7e?w=600&h=600&fit=crop" alt="Aswan Dam" class="w-full h-full object-cover transition-slow group-hover:scale-110" referrerPolicy="no-referrer" loading="lazy">
+              <img src="https://www.arabcont.com/images/projects/project-1.jpg" alt="Project" class="w-full h-full object-cover transition-slow group-hover:scale-110" onerror="this.src='https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=800';" referrerPolicy="no-referrer" loading="lazy">
               <div class="overlay flex-center opacity-0 group-hover:opacity-100 transition-slow">
-                <span class="text-white font-bold">Aswan High Dam</span>
+                <span class="text-white font-bold" data-i18n="project_rod_title">Rod El Farag Bridge</span>
               </div>
             </div>
             <div class="stagger-item overflow-hidden radius-card group h-64">
-              <img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=600&h=600&fit=crop" alt="Bridge" class="w-full h-full object-cover transition-slow group-hover:scale-110" referrerPolicy="no-referrer" loading="lazy">
+              <img src="https://www.arabcont.com/images/projects/project-2.jpg" alt="Project" class="w-full h-full object-cover transition-slow group-hover:scale-110" onerror="this.src='https://images.unsplash.com/photo-1503387762-592dee582a7b?w=800';" referrerPolicy="no-referrer" loading="lazy">
               <div class="overlay flex-center opacity-0 group-hover:opacity-100 transition-slow">
-                <span class="text-white font-bold">Rod El Farag Bridge</span>
+                <span class="text-white font-bold" data-i18n="project_aswan_title">Aswan High Dam</span>
               </div>
             </div>
             <div class="stagger-item overflow-hidden radius-card group h-64">
-              <img src="https://images.unsplash.com/photo-1519011985187-444d62641929?w=600&h=600&fit=crop" alt="Metro" class="w-full h-full object-cover transition-slow group-hover:scale-110" referrerPolicy="no-referrer" loading="lazy">
+              <img src="https://www.arabcont.com/images/projects/project-3.jpg" alt="Project" class="w-full h-full object-cover transition-slow group-hover:scale-110" onerror="this.src='https://images.unsplash.com/photo-1590674899484-d5640e854abe?w=800';" referrerPolicy="no-referrer" loading="lazy">
               <div class="overlay flex-center opacity-0 group-hover:opacity-100 transition-slow">
-                <span class="text-white font-bold">Cairo Metro</span>
+                <span class="text-white font-bold" data-i18n="project_metro_title">Cairo Metro</span>
               </div>
             </div>
             <div class="stagger-item overflow-hidden radius-card group h-64">
-              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=600&fit=crop" alt="NAC" class="w-full h-full object-cover transition-slow group-hover:scale-110" referrerPolicy="no-referrer" loading="lazy">
+              <img src="https://www.arabcont.com/images/projects/project-4.jpg" alt="Project" class="w-full h-full object-cover transition-slow group-hover:scale-110" onerror="this.src='https://images.unsplash.com/photo-1513828583688-c52646db42da?w=800';" referrerPolicy="no-referrer" loading="lazy">
               <div class="overlay flex-center opacity-0 group-hover:opacity-100 transition-slow">
-                <span class="text-white font-bold">New Capital</span>
-              </div>
-            </div>
-            <div class="stagger-item overflow-hidden radius-card group h-64">
-              <img src="https://images.unsplash.com/photo-1503387762-592dee58c162?w=600&h=600&fit=crop" alt="GEM" class="w-full h-full object-cover transition-slow group-hover:scale-110" referrerPolicy="no-referrer" loading="lazy">
-              <div class="overlay flex-center opacity-0 group-hover:opacity-100 transition-slow">
-                <span class="text-white font-bold">Grand Egyptian Museum</span>
-              </div>
-            </div>
-            <div class="stagger-item overflow-hidden radius-card group h-64">
-              <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=600&h=600&fit=crop" alt="Mosque" class="w-full h-full object-cover transition-slow group-hover:scale-110" referrerPolicy="no-referrer" loading="lazy">
-              <div class="overlay flex-center opacity-0 group-hover:opacity-100 transition-slow">
-                <span class="text-white font-bold">Al-Fattah Al-Aleem Mosque</span>
-              </div>
-            </div>
-            <div class="stagger-item overflow-hidden radius-card group h-64">
-              <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&h=600&fit=crop" alt="Stadium" class="w-full h-full object-cover transition-slow group-hover:scale-110" referrerPolicy="no-referrer" loading="lazy">
-              <div class="overlay flex-center opacity-0 group-hover:opacity-100 transition-slow">
-                <span class="text-white font-bold">Borg El Arab Stadium</span>
-              </div>
-            </div>
-            <div class="stagger-item overflow-hidden radius-card group h-64">
-              <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=600&fit=crop" alt="Tunnel" class="w-full h-full object-cover transition-slow group-hover:scale-110" referrerPolicy="no-referrer" loading="lazy">
-              <div class="overlay flex-center opacity-0 group-hover:opacity-100 transition-slow">
-                <span class="text-white font-bold">Suez Canal Tunnels</span>
+                <span class="text-white font-bold" data-i18n="project_nac_title">New Capital</span>
               </div>
             </div>
           </div>
@@ -282,8 +243,48 @@
     </main>
 
     <footer class="footer pt-4xl pb-xl">
-      <div class="container text-center">
-        <p class="text-small opacity-100">© <span id="footer-year"></span> Arab Contractors. All rights reserved.</p>
+      <div class="container">
+        <div class="grid grid-4 gap-xl mb-3xl">
+          <div class="col-span-1">
+            <a href="index.html" class="logo flex mb-md">
+              <svg width="150" height="50" viewBox="0 0 180 60" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="30" cy="30" r="25" fill="#003366" />
+                <text x="30" y="38" font-family="Arial" font-size="24" fill="white" text-anchor="middle" font-weight="bold">AC</text>
+                <text x="65" y="28" font-family="Arial" font-size="18" fill="white" font-weight="bold">ARAB CONTRACTORS</text>
+                <text x="65" y="48" font-family="Arial" font-size="14" fill="#E8A317" font-weight="bold">المقاولون العرب</text>
+              </svg>
+            </a>
+            <p class="text-small opacity-70 mb-md" data-i18n="footer_desc">One of the leading construction companies in the Middle East and Africa.</p>
+          </div>
+          <div>
+            <h4 class="text-white mb-lg" data-i18n="footer_quick_links">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="about.html" data-i18n="nav_about">About Us</a></li>
+              <li><a href="projects.html" data-i18n="nav_projects">Projects</a></li>
+              <li><a href="sectors.html" data-i18n="nav_sectors">Sectors</a></li>
+              <li><a href="news.html" data-i18n="nav_news">News</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white mb-lg" data-i18n="footer_contact">Contact</h4>
+            <ul class="footer-links">
+              <li class="text-small opacity-70">34 Adly St., Cairo, Egypt</li>
+              <li class="text-small opacity-70">+20 2 23959500</li>
+              <li class="text-small opacity-70">info@arabcont.com</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white mb-lg" data-i18n="footer_follow">Follow Us</h4>
+            <div class="flex gap-md">
+              <a href="#" class="social-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+              <a href="#" class="social-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.84 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg></a>
+              <a href="#" class="social-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.132 5.775.072 7.053.015 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.985 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.057-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.015 15.26 0 12 0zm0 2.16c3.203 0 3.58.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.27.07 1.645.07 4.85s-.015 3.58-.07 4.85c-.055 1.17-.249 1.805-.413 2.227-.217.562-.477.96-.896 1.382-.419.419-.818.679-1.381.896-.422.164-1.056.36-2.227.413-1.27.057-1.645.07-4.85.07s-3.58-.015-4.85-.07c-1.17-.055-1.805-.249-2.227-.413-.562-.217-.96-.477-1.382-.896-.419-.419-.679-.818-.896-1.381-.164-.422-.36-1.056-.413-2.227-.054-1.27-.07-1.645-.07-4.85s.016-3.58.07-4.85c.055-1.17.249-1.805.413-2.227.217-.562.477-.96.896-1.382.419-.419.819-.679 1.381-.896.422-.164 1.057-.36 2.227-.413 1.27-.054 1.645-.07 4.85-.07zM12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-white border-opacity-10 mt-2xl pt-xl text-center">
+          <p class="text-small opacity-50">© <span id="footer-year"></span> Arab Contractors. All rights reserved.</p>
+        </div>
       </div>
     </footer>
 

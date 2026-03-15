@@ -115,13 +115,14 @@ main {
   -webkit-backdrop-filter: blur(15px);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
   z-index: 1000;
-  transition: var(--transition-default);
+  transition: all 0.4s var(--ease-smooth);
   border-bottom: 1px solid var(--border-color);
 }
 
 .header.scrolled {
   background-color: var(--nav-bg);
-  height: 60px;
+  height: 70px;
+  box-shadow: var(--shadow-medium);
 }
 
 @media (min-width: 1024px) {
@@ -260,26 +261,98 @@ main {
   height: 100%;
   background-color: var(--bg-card);
   z-index: 2000;
-  transition: var(--transition-default);
+  transition: transform 0.5s var(--ease-out-expo), inset-inline-end 0.5s var(--ease-out-expo);
   box-shadow: var(--shadow-strong);
-  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .nav-drawer.active {
   inset-inline-end: 0;
 }
 
+.drawer-header {
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--bg-card);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.drawer-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-xl);
+}
+
 .drawer-links li {
-  margin-bottom: var(--space-md);
-  border-bottom: 1px solid var(--color-neutral-light);
+  margin-bottom: var(--space-sm);
 }
 
 .drawer-links a {
-  font-size: 1.25rem;
-  font-weight: 700;
-  display: block;
+  font-size: 1.5rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: var(--space-md) 0;
   color: var(--text-main);
+  transition: color 0.3s ease, transform 0.3s ease;
+  font-family: var(--font-display);
+}
+
+.drawer-links a:hover {
+  color: var(--color-secondary);
+  transform: translateX(10px);
+}
+
+.drawer-links a.active {
+  color: var(--color-secondary);
+}
+
+.drawer-footer {
+  padding: var(--space-xl);
+  border-top: 1px solid var(--border-color);
+  background-color: var(--bg-card);
+}
+
+.drawer-social {
+  display: flex;
+  gap: var(--space-lg);
+  margin-top: var(--space-md);
+}
+
+.drawer-social a {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s var(--ease-bounce);
+}
+
+.drawer-social a:hover {
+  transform: scale(1.1) rotate(5deg);
+  background-color: var(--color-secondary);
+}
+
+.drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 1999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+}
+
+.drawer-overlay.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* Innovation Section Grid */

@@ -72,7 +72,16 @@ const ProjectsPage: React.FC = () => {
             {filteredProjects.map((project) => (
               <div key={project.id} className="card">
                 <div className="card-img-wrapper">
-                  <img src={project.image} alt={project.title} className="card-img" referrerPolicy="no-referrer" />
+                  <img 
+                    src={project.image} 
+                    alt={project.title} 
+                    className="card-img" 
+                    referrerPolicy="no-referrer" 
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.src = 'https://images.unsplash.com/photo-1541888086225-f6404f45af53?w=600';
+                    }}
+                  />
                   <div className="badge absolute top-md left-md">{project.category}</div>
                 </div>
                 <div className="card-content">

@@ -22,6 +22,10 @@ const Innovation: React.FC = () => {
                 alt="Construction Technology" 
                 className="relative w-full h-auto min-h-[400px] object-cover rounded-2xl shadow-2xl"
                 referrerPolicy="no-referrer"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.src = 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800';
+                }}
               />
               <div className="absolute bottom-6 right-6 bg-white/90 backdrop-blur-md p-4 rounded-xl shadow-lg hidden sm:block">
                 <div className="flex items-center gap-3">

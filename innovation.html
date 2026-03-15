@@ -46,13 +46,13 @@
         </a>
         <nav class="nav-desktop">
           <ul class="flex gap-xl">
-            <li><a href="index.html" class="nav-link">Home</a></li>
-            <li><a href="about.html" class="nav-link">About</a></li>
-            <li><a href="projects.html" class="nav-link">Projects</a></li>
-            <li><a href="sectors.html" class="nav-link">Sectors</a></li>
-            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
-            <li><a href="news.html" class="nav-link">News</a></li>
-            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+            <li><a href="about.html" class="nav-link" data-i18n="nav_about">About</a></li>
+            <li><a href="projects.html" class="nav-link" data-i18n="nav_projects">Projects</a></li>
+            <li><a href="sectors.html" class="nav-link" data-i18n="nav_sectors">Sectors</a></li>
+            <li><a href="gallery.html" class="nav-link" data-i18n="nav_gallery">Gallery</a></li>
+            <li><a href="news.html" class="nav-link" data-i18n="nav_news">News</a></li>
+            <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a></li>
           </ul>
         </nav>
         <div class="nav-actions flex-center gap-md">
@@ -68,26 +68,26 @@
 
     <div class="nav-drawer">
       <div class="drawer-header flex-between p-lg">
-        <span class="text-small">MENU</span>
+        <span class="text-small" data-i18n="menu">MENU</span>
         <button class="nav-close"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
       </div>
       <ul class="drawer-links p-lg">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="sectors.html">Sectors</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+        <li><a href="about.html" data-i18n="nav_about">About</a></li>
+        <li><a href="projects.html" data-i18n="nav_projects">Projects</a></li>
+        <li><a href="sectors.html" data-i18n="nav_sectors">Sectors</a></li>
+        <li><a href="gallery.html" data-i18n="nav_gallery">Gallery</a></li>
+        <li><a href="news.html" data-i18n="nav_news">News</a></li>
+        <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
       </ul>
     </div>
 
     <main>
-      <section class="section-dark py-4xl relative" style="background-image: url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1920'); background-size: cover; background-position: center;">
+      <section class="section-dark py-4xl relative" style="background-image: url('https://www.arabcont.com/images/projects/project-10.jpg'); background-size: cover; background-position: center;">
         <div class="overlay"></div>
         <div class="container relative z-10 text-center">
-          <h1 class="text-white">Innovation & Technology</h1>
-          <p class="text-white opacity-100">Pioneering the future of construction through digital transformation</p>
+          <h1 class="text-white" data-i18n="innovation_page_title">Innovation & Technology</h1>
+          <p class="text-white opacity-100" data-i18n="innovation_page_subtitle">Pioneering the future of construction through digital transformation</p>
         </div>
       </section>
 
@@ -95,41 +95,80 @@
         <div class="container">
           <div class="grid grid-2 items-center mb-4xl">
             <div class="reveal reveal-left">
-              <h2>Digital Construction & BIM</h2>
-              <p class="text-body mb-lg">We utilize Building Information Modeling (BIM) to create detailed 3D digital representations of our projects. This allows for better coordination, reduced waste, and optimized construction timelines.</p>
-              <ul class="mb-lg">
-                <li>• 3D Modeling & Coordination</li>
-                <li>• 4D Scheduling & Simulation</li>
-                <li>• 5D Cost Estimation</li>
-                <li>• Digital Twin Integration</li>
+              <h2 data-i18n="innovation_bim_title">Digital Construction & BIM</h2>
+              <p class="text-body mb-lg" data-i18n="innovation_bim_desc">We utilize Building Information Modeling (BIM) to create detailed 3D digital representations of our projects. This allows for better coordination, reduced waste, and optimized construction timelines.</p>
+              <ul class="mb-lg flex flex-col gap-sm">
+                <li data-i18n="innovation_bim_item_1">• 3D Modeling & Coordination</li>
+                <li data-i18n="innovation_bim_item_2">• 4D Scheduling & Simulation</li>
+                <li data-i18n="innovation_bim_item_3">• 5D Cost Estimation</li>
+                <li data-i18n="innovation_bim_item_4">• Digital Twin Integration</li>
               </ul>
             </div>
             <div class="reveal reveal-right">
-              <img src="https://images.unsplash.com/photo-1503387762-592dee582a7b?w=800" alt="BIM" class="radius-card shadow-strong w-full h-auto object-cover" referrerPolicy="no-referrer" loading="lazy">
+              <img src="https://www.arabcont.com/images/projects/project-11.jpg" alt="BIM" class="radius-card shadow-strong w-full h-auto object-cover" onerror="this.src='https://images.unsplash.com/photo-1503387762-592dee582a7b?w=800';" referrerPolicy="no-referrer" loading="lazy">
             </div>
           </div>
 
-          <div class="grid grid-3">
-            <div class="card p-xl reveal reveal-up">
-              <h3 class="text-gold">Smart Equipment</h3>
-              <p class="text-body">Our fleet is equipped with GPS and telematics to monitor performance and safety in real-time.</p>
+          <div class="grid grid-3 stagger-container">
+            <div class="card p-xl reveal reveal-up stagger-item">
+              <h3 class="text-gold" data-i18n="innovation_smart_title">Smart Equipment</h3>
+              <p class="text-body" data-i18n="innovation_smart_desc">Our fleet is equipped with GPS and telematics to monitor performance and safety in real-time.</p>
             </div>
-            <div class="card p-xl reveal reveal-up" style="transition-delay: 0.1s;">
-              <h3 class="text-gold">Green Building</h3>
-              <p class="text-body">Implementing sustainable materials and energy-efficient designs to reduce the carbon footprint of our projects.</p>
+            <div class="card p-xl reveal reveal-up stagger-item">
+              <h3 class="text-gold" data-i18n="innovation_green_title">Green Building</h3>
+              <p class="text-body" data-i18n="innovation_green_desc">Implementing sustainable materials and energy-efficient designs to reduce the carbon footprint of our projects.</p>
             </div>
-            <div class="card p-xl reveal reveal-up" style="transition-delay: 0.2s;">
-              <h3 class="text-gold">R&D Center</h3>
-              <p class="text-body">Our dedicated research center explores new construction techniques and materials to stay ahead of industry trends.</p>
+            <div class="card p-xl reveal reveal-up stagger-item">
+              <h3 class="text-gold" data-i18n="innovation_rd_title">R&D Center</h3>
+              <p class="text-body" data-i18n="innovation_rd_desc">Our dedicated research center explores new construction techniques and materials to stay ahead of industry trends.</p>
             </div>
           </div>
         </div>
       </section>
     </main>
 
+    <!-- Footer -->
     <footer class="footer pt-4xl pb-xl">
-      <div class="container text-center">
-        <p class="text-small opacity-100">© <span id="footer-year"></span> Arab Contractors. All rights reserved.</p>
+      <div class="container">
+        <div class="grid grid-4 mb-4xl">
+          <div>
+            <svg width="150" height="50" viewBox="0 0 180 60" xmlns="http://www.w3.org/2000/svg" class="mb-lg">
+              <circle cx="30" cy="30" r="25" fill="var(--color-primary)" />
+              <text x="30" y="38" font-family="Arial" font-size="24" fill="var(--bg-card)" text-anchor="middle" font-weight="bold">AC</text>
+              <text x="65" y="28" font-family="Arial" font-size="18" fill="var(--text-main)" font-weight="bold">ARAB CONTRACTORS</text>
+              <text x="65" y="48" font-family="Arial" font-size="14" fill="var(--color-secondary)" font-weight="bold">المقاولون العرب</text>
+            </svg>
+            <p class="text-small opacity-100" data-i18n="footer_desc">One of the largest and oldest construction companies in the Middle East and Africa, with roots extending back more than half a century.</p>
+          </div>
+          <div>
+            <h4 class="mb-xl text-main" data-i18n="footer_quick_links">Quick Links</h4>
+            <ul class="text-small opacity-100 flex flex-col gap-sm">
+              <li><a href="about.html" class="hover:text-gold" data-i18n="nav_about">About Us</a></li>
+              <li><a href="projects.html" class="hover:text-gold" data-i18n="nav_projects">Projects</a></li>
+              <li><a href="sectors.html" class="hover:text-gold" data-i18n="nav_sectors">Sectors</a></li>
+              <li><a href="news.html" class="hover:text-gold" data-i18n="nav_news">News</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="mb-xl text-main" data-i18n="footer_contact">Contact</h4>
+            <ul class="text-small opacity-100 flex flex-col gap-sm">
+              <li data-i18n="footer_address">34 Adly Street - Cairo, Egypt</li>
+              <li>+20 2 23959500</li>
+              <li>info@arabcont.com</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="mb-xl text-main" data-i18n="footer_follow">Follow Us</h4>
+            <div class="flex gap-md">
+              <a href="#" class="hover:text-gold"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+              <a href="#" class="hover:text-gold"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a>
+              <a href="#" class="hover:text-gold"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+            </div>
+          </div>
+        </div>
+        <div class="border-top pt-xl flex-between">
+          <p class="text-small opacity-100">© <span id="footer-year"></span> <span data-i18n="footer_rights">Arab Contractors. All rights reserved.</span></p>
+        </div>
       </div>
     </footer>
 

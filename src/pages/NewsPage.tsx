@@ -33,7 +33,16 @@ const NewsPage: React.FC = () => {
             {news.map((item) => (
               <div key={item.id} className="card group">
                 <div className="card-img-wrapper overflow-hidden">
-                  <img src={item.image} alt={item.title} className="card-img transition-slow group-hover:scale-110" referrerPolicy="no-referrer" />
+                  <img 
+                    src={item.image} 
+                    alt={item.title} 
+                    className="card-img transition-slow group-hover:scale-110" 
+                    referrerPolicy="no-referrer" 
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.src = 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600';
+                    }}
+                  />
                 </div>
                 <div className="card-content">
                   <div className="flex items-center gap-md text-small text-muted mb-sm">

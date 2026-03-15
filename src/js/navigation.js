@@ -8,20 +8,41 @@ export function initNavigation() {
   const navToggle = document.querySelector('.nav-mobile-toggle');
   const navDrawer = document.querySelector('.nav-drawer');
   const navClose = document.querySelector('.nav-close');
+  const drawerOverlay = document.querySelector('.drawer-overlay');
+  const langToggleMobile = document.querySelector('.lang-toggle-mobile');
   const body = document.body;
+
+  const openDrawer = () => {
+    navDrawer.classList.add('active');
+    drawerOverlay.classList.add('active');
+    body.style.overflow = 'hidden';
+  };
+
+  const closeDrawer = () => {
+    navDrawer.classList.remove('active');
+    drawerOverlay.classList.remove('active');
+    body.style.overflow = '';
+  };
 
   // Mobile Menu Toggle
   if (navToggle) {
-    navToggle.addEventListener('click', () => {
-      navDrawer.classList.add('active');
-      body.style.overflow = 'hidden';
-    });
+    navToggle.addEventListener('click', openDrawer);
   }
 
   if (navClose) {
-    navClose.addEventListener('click', () => {
-      navDrawer.classList.remove('active');
-      body.style.overflow = '';
+    navClose.addEventListener('click', closeDrawer);
+  }
+
+  if (drawerOverlay) {
+    drawerOverlay.addEventListener('click', closeDrawer);
+  }
+
+  // Mobile Lang Toggle
+  if (langToggleMobile) {
+    langToggleMobile.addEventListener('click', () => {
+      const langToggle = document.querySelector('.lang-toggle');
+      if (langToggle) langToggle.click();
+      closeDrawer();
     });
   }
 
@@ -39,10 +60,7 @@ export function initNavigation() {
   // Close drawer on link click
   const drawerLinks = document.querySelectorAll('.nav-drawer a');
   drawerLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      navDrawer.classList.remove('active');
-      body.style.overflow = '';
-    });
+    link.addEventListener('click', closeDrawer);
   });
 
   // Mega Menu Hover Logic (Desktop)

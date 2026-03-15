@@ -67,7 +67,17 @@ const ProjectDetailPage: React.FC = () => {
 
               <div className="grid grid-3 gap-md stagger-container">
                 {project.gallery.map((img, i) => (
-                  <img key={i} src={img} alt="Gallery" className="radius-card shadow-md aspect-video object-cover" referrerPolicy="no-referrer" />
+                  <img 
+                    key={i} 
+                    src={img} 
+                    alt="Gallery" 
+                    className="radius-card shadow-md aspect-video object-cover" 
+                    referrerPolicy="no-referrer" 
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.src = 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=800';
+                    }}
+                  />
                 ))}
               </div>
             </div>

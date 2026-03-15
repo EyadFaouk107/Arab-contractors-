@@ -30,15 +30,42 @@
 }
 
 @media (max-width: 767px) {
+  .header {
+    height: var(--nav-height);
+    padding: 0 var(--space-md);
+  }
+
+  main {
+    padding-top: 0; /* Hero handles its own padding */
+  }
+
+  .section {
+    padding-top: var(--space-2xl);
+    padding-bottom: var(--space-2xl);
+  }
+
   .flex-between {
-    flex-direction: column;
-    text-align: center;
-    gap: var(--space-lg);
+    flex-direction: row; /* Keep logo and hamburger on same line */
+    text-align: left;
+    gap: var(--space-xs);
   }
   
+  .nav-actions {
+    gap: var(--space-xs);
+  }
+
+  .nav-actions button {
+    padding: 6px;
+  }
+
+  .logo svg {
+    width: 120px;
+  }
+
   .footer .flex-between {
     flex-direction: column;
     gap: var(--space-md);
+    text-align: center;
   }
 
   .stat-box {
@@ -46,9 +73,9 @@
   }
   
   .btn {
-    width: auto;
+    width: 100%; /* Full width buttons on mobile for better touch target */
     min-width: 140px;
-    padding: 10px 20px;
+    padding: 14px 24px;
     font-size: 0.9rem;
   }
   
@@ -56,6 +83,22 @@
     text-align: center;
     padding-left: var(--space-md);
     padding-right: var(--space-md);
+  }
+
+  /* Fix for GEM text overlap and other mobile layout issues */
+  .grid-2, .grid-3, .grid-4 {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-xl);
+  }
+}
+
+@media (max-width: 380px) {
+  .logo svg {
+    width: 100px;
+  }
+  
+  .search-trigger {
+    display: none !important; /* Hide search on very small screens to save space */
   }
 }
 
