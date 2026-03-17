@@ -3,13 +3,25 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import './js/main.js';
 import ThemeToggle from './components/ThemeToggle';
-import Search from './components/Search';
+import { NavbarSearch } from './components/NavbarSearch';
 import Hero3D from './components/Hero3D';
 import FloatingParticles from './components/FloatingParticles';
 import Innovation3D from './components/Innovation3D';
 import { ThemeProvider } from './context/ThemeContext';
+import ProjectsPage from './pages/ProjectsPage';
 
 const toggleRoot = document.getElementById('theme-toggle-root');
+// Projects Root
+const projectsRoot = document.getElementById('projects-root');
+if (projectsRoot) {
+  ReactDOM.createRoot(projectsRoot).render(
+    <React.StrictMode>
+      <ThemeProvider>
+        <ProjectsPage />
+      </ThemeProvider>
+    </React.StrictMode>
+  );
+}
 if (toggleRoot) {
   ReactDOM.createRoot(toggleRoot).render(
     <React.StrictMode>
@@ -20,16 +32,29 @@ if (toggleRoot) {
   );
 }
 
-// Search System Root
-const searchRoot = document.createElement('div');
-searchRoot.id = 'search-system-root';
-document.body.appendChild(searchRoot);
+// Search Root
+const searchRoot = document.getElementById('search-root');
+if (searchRoot) {
+  ReactDOM.createRoot(searchRoot).render(
+    <React.StrictMode>
+      <ThemeProvider>
+        <NavbarSearch />
+      </ThemeProvider>
+    </React.StrictMode>
+  );
+}
 
-ReactDOM.createRoot(searchRoot).render(
-  <React.StrictMode>
-    <Search />
-  </React.StrictMode>
-);
+// Search Root Mobile
+const searchRootMobile = document.getElementById('search-root-mobile');
+if (searchRootMobile) {
+  ReactDOM.createRoot(searchRootMobile).render(
+    <React.StrictMode>
+      <ThemeProvider>
+        <NavbarSearch />
+      </ThemeProvider>
+    </React.StrictMode>
+  );
+}
 
 // Hero 3D Root
 const hero3dRoot = document.getElementById('hero-3d-root');

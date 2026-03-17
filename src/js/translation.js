@@ -10,6 +10,8 @@ const translations = {
     "hero_subtitle": "SINCE 1955 — BUILDING THE FUTURE",
     "hero_title": "Engineering Tomorrow's Infrastructure Today",
     "hero_desc": "One of the largest international construction companies, delivering excellence across the Middle East and Africa.",
+    "home_legacy_title": "Our Legacy of Excellence",
+    "home_legacy_desc": "With over 70 years of experience, we have shaped the skyline of cities across the Middle East and Africa.",
     "btn_explore": "Our Projects",
     "btn_story": "Contact Us",
     "hero_subtitle_2": "INNOVATION AT CORE",
@@ -29,10 +31,19 @@ const translations = {
     "about_list_2": "70+ years of engineering heritage",
     "about_list_3": "Operating in over 30 countries",
     "btn_read_more": "Read More",
-    "stats_years": "Years Experience",
+    "stats_years": "Years of Experience",
     "stats_projects": "Projects Completed",
     "stats_countries": "Countries",
     "stats_employees": "Employees",
+    "sector_public_buildings": "Public Buildings",
+    "sector_public_buildings_desc": "Hospitals, universities, and government administrative centers that serve the community.",
+    "sector_infrastructure": "Infrastructure",
+    "sector_infrastructure_desc": "Bridges, highways, and complex transportation networks connecting people and places.",
+    "sector_energy": "Energy & Power",
+    "sector_energy_desc": "Power plants, solar farms, and renewable energy solutions for a sustainable future.",
+    "innovation_bim_title": "BIM 3D",
+    "innovation_green_title": "Green Build",
+    "btn_learn_more": "LEARN MORE →",
     "portfolio_subtitle": "PORTFOLIO",
     "portfolio_title": "Landmark Projects",
     "project_1_title": "Rod El Farag Axis Bridge",
@@ -44,8 +55,16 @@ const translations = {
     "project_3_title": "Cairo Metro Expansion",
     "project_3_loc": "Cairo, Egypt • Ongoing",
     "project_3_desc": "Developing one of the most efficient urban transport systems in Africa.",
-    "btn_view_details": "View Details",
+    "btn_view_details": "View Details →",
     "btn_all_projects": "View All Projects",
+    "gallery_subtitle_desc": "A glimpse into our diverse portfolio of landmark projects across the globe.",
+    "footer_rights_reserved": "All rights reserved.",
+    "footer_follow_us": "Follow Us",
+    "footer_quick_links": "Quick Links",
+    "footer_contact": "Contact",
+    "footer_address_val": "34 Adly Street - Cairo, Egypt",
+    "footer_phone_val": "+20 2 23959500",
+    "footer_email_val": "info@arabcont.com",
     "expertise_subtitle": "EXPERTISE",
     "expertise_title": "Industries We Serve",
     "sector_1_title": "Public Buildings",
@@ -157,13 +176,17 @@ const translations = {
     "about_leader_2_name": "Eng. Sayed El Wazir",
     "about_leader_2_role": "Vice Chairman",
     "about_leader_3_name": "Eng. Ahmed El Adalany",
-    "about_leader_3_role": "Board Member",
+    "about_leader_3_role": "Vice Chairman",
     "about_leader_4_name": "Eng. Heba Abul Ela",
-    "about_leader_4_role": "Board Member",
-    "about_leader_5_name": "Eng. Osama Moustafa",
-    "about_leader_5_role": "Board Member",
-    "about_leader_6_name": "Eng. Ibrahim Mabrouk",
+    "about_leader_4_role": "Vice Chairman",
+    "about_leader_5_name": "Eng. Hassan Moustafa",
+    "about_leader_5_role": "Vice Chairman",
+    "about_leader_6_name": "Eng. Osama Moustafa",
     "about_leader_6_role": "Board Member",
+    "about_leader_7_name": "Eng. Ibrahim Mabrouk",
+    "about_leader_7_role": "Board Member",
+    "about_leader_8_name": "Eng. Tarek Khedr",
+    "about_leader_8_role": "Board Member",
     "projects_page_title": "Our Projects",
     "projects_page_subtitle": "Engineering landmarks that shape the future",
     "projects_filter_all": "All Projects",
@@ -266,6 +289,8 @@ const translations = {
     "hero_subtitle": "منذ عام 1955 — نبني المستقبل",
     "hero_title": "هندسة البنية التحتية للغد، اليوم",
     "hero_desc": "واحدة من أكبر شركات المقاولات الدولية، تقدم التميز في جميع أنحاء الشرق الأوسط وأفريقيا.",
+    "home_legacy_title": "إرث من التميز",
+    "home_legacy_desc": "مع أكثر من 70 عامًا من الخبرة، قمنا بتشكيل أفق المدن في جميع أنحاء الشرق الأوسط وأفريقيا.",
     "btn_explore": "مشاريعنا",
     "btn_story": "اتصل بنا",
     "hero_subtitle_2": "الابتكار في الصميم",
@@ -300,8 +325,16 @@ const translations = {
     "project_3_title": "توسعة مترو القاهرة",
     "project_3_loc": "القاهرة، مصر • مستمر",
     "project_3_desc": "تطوير أحد أكثر أنظمة النقل الحضري كفاءة في أفريقيا.",
-    "btn_view_details": "عرض التفاصيل",
+    "btn_view_details": "عرض التفاصيل ←",
     "btn_all_projects": "عرض جميع المشاريع",
+    "gallery_subtitle_desc": "لمحة عن محفظتنا المتنوعة من المشاريع البارزة حول العالم.",
+    "footer_rights_reserved": "جميع الحقوق محفوظة.",
+    "footer_follow_us": "تابعنا",
+    "footer_quick_links": "روابط سريعة",
+    "footer_contact": "اتصل بنا",
+    "footer_address_val": "34 شارع عدلي - القاهرة، مصر",
+    "footer_phone_val": "+20 2 23959500",
+    "footer_email_val": "info@arabcont.com",
     "expertise_subtitle": "خبراتنا",
     "expertise_title": "الصناعات التي نخدمها",
     "sector_1_title": "المباني العامة",
@@ -357,7 +390,7 @@ const translations = {
     "footer_social_title": "تابعنا",
     "footer_copyright": "©",
     "footer_rights": "جميع الحقوق محفوظة.",
-    "footer_quick_links": "روابط سريعة",
+    "footer_quick_links_alt": "روابط سريعة",
     "footer_contact": "اتصل بنا",
     "footer_follow": "تابعنا",
     "footer_address": "34 شارع عدلي - القاهرة، مصر",
@@ -550,6 +583,11 @@ export function applyLanguage(lang) {
     btn.textContent = lang === 'ar' ? 'EN' : 'AR';
   });
 
+  const langTogglesMobile = document.querySelectorAll('.lang-toggle-mobile');
+  langTogglesMobile.forEach(btn => {
+    btn.textContent = lang === 'ar' ? 'ENGLISH - الإنجليزية' : 'ARABIC - العربية';
+  });
+
   // Translate all elements with data-i18n
   const elements = document.querySelectorAll('[data-i18n]');
   elements.forEach(el => {
@@ -583,7 +621,7 @@ export function applyLanguage(lang) {
 }
 
 export function initTranslation() {
-  const langToggles = document.querySelectorAll('.lang-toggle');
+  const langToggles = document.querySelectorAll('.lang-toggle, .lang-toggle-mobile');
   
   // 1. Get saved language or default to 'en'
   let currentLang = localStorage.getItem('app_lang') || 'en';

@@ -1,7 +1,10 @@
 import React from 'react';
 import { motion } from 'motion/react';
+import { useLanguage } from '../context/LanguageContext';
 
 const Innovation: React.FC = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="innovation-section py-24 bg-neutral-light overflow-hidden">
       <div className="container px-6 mx-auto">
@@ -33,8 +36,8 @@ const Innovation: React.FC = () => {
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
                   </div>
                   <div>
-                    <p className="text-xs font-bold text-gray-500 uppercase tracking-wider">Technology</p>
-                    <p className="text-sm font-bold text-primary">BIM 3D Modeling</p>
+                    <p className="text-xs font-bold text-gray-500 uppercase tracking-wider">{t('innovation_subtitle')}</p>
+                    <p className="text-sm font-bold text-primary">{t('innovation_bim')}</p>
                   </div>
                 </div>
               </div>
@@ -50,31 +53,31 @@ const Innovation: React.FC = () => {
             className="w-full lg:w-1/2"
           >
             <span className="inline-block px-3 py-1 mb-4 text-xs font-bold tracking-widest text-gold uppercase bg-gold/10 rounded-md">
-              Innovation
+              {t('innovation_subtitle')}
             </span>
             <h2 className="mb-6 text-3xl font-bold text-primary md:text-4xl lg:text-5xl font-display leading-tight">
-              Building with Intelligence & <span className="text-gold">Digital Precision</span>
+              {t('innovation_title')}
             </h2>
             <p className="mb-8 text-lg text-gray-600 leading-relaxed">
-              We leverage Building Information Modeling (BIM) and digital twin technology to optimize every phase of construction. Our commitment to innovation ensures that we deliver projects with unmatched precision, reduced waste, and enhanced sustainability.
+              {t('innovation_desc')}
             </p>
             
             <div className="grid grid-1 sm:grid-2 gap-6 mb-10">
               <div className="p-6 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                <h4 className="mb-2 text-lg font-bold text-primary">BIM 3D Implementation</h4>
-                <p className="text-sm text-gray-500">Advanced digital modeling for conflict resolution and structural optimization before ground-breaking.</p>
+                <h4 className="mb-2 text-lg font-bold text-primary">{t('innovation_bim_title')}</h4>
+                <p className="text-sm text-gray-500">{t('innovation_bim_desc')}</p>
               </div>
               <div className="p-6 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                <h4 className="mb-2 text-lg font-bold text-primary">Green Build Initiatives</h4>
-                <p className="text-sm text-gray-500">Integrating sustainable materials and energy-efficient systems into every landmark infrastructure project.</p>
+                <h4 className="mb-2 text-lg font-bold text-primary">{t('innovation_green_title')}</h4>
+                <p className="text-sm text-gray-500">{t('innovation_green_desc')}</p>
               </div>
             </div>
             
             <a 
-              href="/innovation" 
+              href="innovation.html" 
               className="inline-flex items-center gap-2 px-6 py-3 text-sm font-bold text-white bg-primary rounded-lg hover:bg-primary-dark transition-all group"
             >
-              Discover Our Innovation
+              {t('btn_discover_more')}
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="group-hover:translate-x-1 transition-transform"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
           </motion.div>

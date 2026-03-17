@@ -81,17 +81,17 @@ const AboutPage: React.FC = () => {
             <h2>{t('about_leadership_title')}</h2>
           </div>
           <div className="grid grid-4 stagger-container">
-            {[1, 2, 3, 4].map((i) => (
+            {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
               <div key={i} className="text-center group">
                 <div className="overflow-hidden radius-card mb-md">
                   <img 
-                    src={`https://images.unsplash.com/photo-${i === 1 ? '1507003211169-0a1dd7228f2d' : i === 2 ? '1500648767791-00dcc994a43e' : i === 3 ? '1472099645785-5658abf4ff4e' : '1544005313-94ddf0286df2'}?w=400&h=500&fit=crop`} 
+                    src={`https://picsum.photos/seed/leader${i}/400/500`} 
                     alt="Leader" 
                     className="w-full h-full object-cover transition-slow group-hover:scale-110"
                     referrerPolicy="no-referrer"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
-                      target.src = 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop';
+                      target.src = `https://picsum.photos/seed/fallback${i}/400/500`;
                     }}
                   />
                 </div>

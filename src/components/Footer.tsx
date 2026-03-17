@@ -1,6 +1,9 @@
 import React from 'react';
+import { useLanguage } from '../context/LanguageContext';
 
 const Footer: React.FC = () => {
+  const { t } = useLanguage();
+
   return (
     <footer className="footer py-16 bg-gray-900 text-white">
       <div className="container mx-auto px-6">
@@ -11,31 +14,31 @@ const Footer: React.FC = () => {
               <span className="font-bold tracking-wider">ARAB CONTRACTORS</span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
-              One of the largest and oldest construction companies in the Middle East and Africa, with roots extending back more than half a century.
+              {t('footer_desc')}
             </p>
           </div>
           
           <div>
-            <h4 className="text-lg font-bold mb-6">Quick Links</h4>
+            <h4 className="text-lg font-bold mb-6">{t('footer_quick_links')}</h4>
             <ul className="flex flex-col gap-3 text-sm text-gray-400">
-              <li><a href="/about" className="hover:text-gold transition-colors">About Us</a></li>
-              <li><a href="/projects" className="hover:text-gold transition-colors">Our Projects</a></li>
-              <li><a href="/sectors" className="hover:text-gold transition-colors">Sectors</a></li>
-              <li><a href="/news" className="hover:text-gold transition-colors">Latest News</a></li>
+              <li><a href="about.html" className="hover:text-gold transition-colors">{t('nav_about')}</a></li>
+              <li><a href="projects.html" className="hover:text-gold transition-colors">{t('nav_projects')}</a></li>
+              <li><a href="sectors.html" className="hover:text-gold transition-colors">{t('nav_sectors')}</a></li>
+              <li><a href="news.html" className="hover:text-gold transition-colors">{t('nav_news')}</a></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="text-lg font-bold mb-6">Contact</h4>
+            <h4 className="text-lg font-bold mb-6">{t('footer_contact')}</h4>
             <ul className="flex flex-col gap-3 text-sm text-gray-400">
-              <li>34 Adly Street - Cairo, Egypt</li>
-              <li>+20 2 23959500</li>
-              <li>info@arabcont.com</li>
+              <li>{t('footer_address_val')}</li>
+              <li>{t('footer_phone_val')}</li>
+              <li>{t('footer_email_val')}</li>
             </ul>
           </div>
           
           <div>
-            <h4 className="text-lg font-bold mb-6">Follow Us</h4>
+            <h4 className="text-lg font-bold mb-6">{t('footer_follow_us')}</h4>
             <div className="flex gap-4">
               <a href="#" className="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center hover:bg-gold hover:border-gold transition-all">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
@@ -51,10 +54,10 @@ const Footer: React.FC = () => {
         </div>
         
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
-          <p>© {new Date().getFullYear()} Arab Contractors. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} {t('footer_rights')}</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+            <a href="#" className="hover:text-white transition-colors">{t('footer_privacy')}</a>
+            <a href="#" className="hover:text-white transition-colors">{t('footer_terms')}</a>
           </div>
         </div>
       </div>

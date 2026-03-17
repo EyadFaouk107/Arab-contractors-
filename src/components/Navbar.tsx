@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ThemeToggle from './ThemeToggle';
+import { NavbarSearch } from './NavbarSearch';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -35,8 +36,12 @@ const Navbar: React.FC = () => {
           </ul>
         </nav>
 
-        <div className="flex items-center gap-4">
-          <ThemeToggle />
+        <div className="flex items-center gap-2 sm:gap-4">
+          <div className="flex items-center">
+            <ThemeToggle />
+            <div className="w-px h-4 bg-zinc-200 dark:bg-zinc-800 mx-1 sm:mx-2"></div>
+            <NavbarSearch />
+          </div>
           <button 
             className="lg:hidden p-2 text-primary"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -59,6 +64,10 @@ const Navbar: React.FC = () => {
           </button>
         </div>
         <ul className="p-6 flex flex-col gap-6">
+          <li className="flex items-center justify-between">
+            <span className="text-xl font-bold">Search</span>
+            <NavbarSearch />
+          </li>
           <li><a href="/" className="text-xl font-bold" onClick={() => setIsMobileMenuOpen(false)}>Home</a></li>
           <li><a href="/about" className="text-xl font-bold" onClick={() => setIsMobileMenuOpen(false)}>About</a></li>
           <li><a href="/projects" className="text-xl font-bold" onClick={() => setIsMobileMenuOpen(false)}>Projects</a></li>
